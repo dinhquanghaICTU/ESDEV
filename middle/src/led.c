@@ -1,10 +1,8 @@
 #include "led.h"
 #include "gpio.h"
-#include "rcc.h"
 
 void led_init(void) {
-    RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
-    gpio_pin_init(GPIOA, 13, GPIO_MODE_OUTPUT_PP_2MHZ);
+    gpio_pin_init(GPIOC, 13, GPIO_MODE_OUTPUT_PP_2MHZ);
 }
 
 void led_on(void) {

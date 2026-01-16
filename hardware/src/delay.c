@@ -1,7 +1,9 @@
-#ifndef __DELAY_H__
-#define __DELAY_H__
+
+#include "delay.h"
 
 
-
-
-#endif//__DELAY_H__
+void delay_ms(unsigned int ms) {
+    for(unsigned int i = 0; i < ms; i++) {
+        for(volatile unsigned int j = 0; j < 2000; j++);
+    }
+}
