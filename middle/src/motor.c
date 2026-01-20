@@ -14,6 +14,7 @@
 //gpio_write_pin(GPIOA, MOTOR_B_IN4_PIN, 1); // right forward
 
 void motor_stop(void);
+
 void motor_init(void) {
     gpio_pin_init(GPIOA, MOTOR_A_IN1_PIN, GPIO_MODE_OUTPUT_PP_2MHZ);
     gpio_pin_init(GPIOA, MOTOR_A_IN2_PIN, GPIO_MODE_OUTPUT_PP_2MHZ);
@@ -34,12 +35,12 @@ void motor_backward(void){
     gpio_write_pin(GPIOA, MOTOR_B_IN3_PIN, 1);
 }
 
-void turn_left(void){
+void turn_right(void){
     gpio_write_pin(GPIOA, MOTOR_A_IN1_PIN, 1); 
     gpio_write_pin(GPIOA, MOTOR_B_IN4_PIN, 0); 
 }
 
-void turn_right(void){
+void turn_left(void){
     gpio_write_pin(GPIOA, MOTOR_B_IN4_PIN, 1); 
     gpio_write_pin(GPIOA, MOTOR_A_IN1_PIN, 1);
 }

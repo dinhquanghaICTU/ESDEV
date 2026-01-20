@@ -1,27 +1,32 @@
 #include "led.h"
 #include "motor.h"
-#include "delay.h"
-
+#include "systick.h"
 #include <stdint.h>
 
-int main(void){
 
-    motor_init();
-    led_init();
+// void test(){
+//     motor_forward();
+//     delay_ms(50);
+//     turn_left();
+//     delay_ms(100);
+// }
+
+int main(void)
+{
+
+        
+    // systick_init();    
     
-    // motor_forward();
-    // delay_ms(1000);
-    // motor_backward();
+    // led_init();        
+    // motor_init();   
     
+    // test();
+
     while (1)
     {
-    //   led_on();  
-        led_on();
-        delay_ms(1000);
-        led_off(); 
-        
-        
-        // delay_ms(1000);
+        // motor_forward();
+        // delay_ms(50);
+        // motor_stop();
+        // delay_ms(50);
     }
-    
 }

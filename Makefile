@@ -1,5 +1,5 @@
 #project name
-PROJECT	:= esdev
+PROJECT	:= ESDEV
 
 #Kien truc
 MCU		:= cortex-m3
@@ -12,7 +12,7 @@ STARTUP_FILE:= startup_stm32f103c8.c
 ###################################
 #			TOOLCHAINS			
 ###################################
-TOOLCHAIN_PATH := /home/quanghaictu/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin
+TOOLCHAIN_PATH := /home/dinhquangha/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin
 PREFIX_TOOLCHAINS	:= arm-none-eabi
 GCC					:= $(TOOLCHAIN_PATH)/$(PREFIX_TOOLCHAINS)-gcc
 CP					:= $(TOOLCHAIN_PATH)/$(PREFIX_TOOLCHAINS)-objcopy
