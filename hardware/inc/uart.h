@@ -38,4 +38,6 @@ uint32_t uart_rx_count(void);
 
 void USART1_IRQHandler(void);
 
+extern volatile uint32_t sys_tick;
+
 #endif // UART_H

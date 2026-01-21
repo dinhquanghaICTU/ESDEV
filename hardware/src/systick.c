@@ -8,15 +8,15 @@
 #define CSR_TICKINT    (1 << 1)
 #define CSR_CLKSOURCE  (1 << 2)
 
-#define CPU_FREQ_HZ 72000000UL
+#define CPU_FREQ_HZ 8000000UL
 
 static volatile uint32_t sys_tick = 0;
 
 void systick_init(void)
 {
-    SYST_CSR = 0;                                   // stop SysTick
-    SYST_RVR = (CPU_FREQ_HZ / 1000) - 1;            // 1ms tick
-    SYST_CVR = 0;                                   // clear counter
+    SYST_CSR = 0;                                   
+    SYST_RVR = (CPU_FREQ_HZ / 1000) - 1;  // = 7999 (OK cho 8MHz)
+    SYST_CVR = 0;                                   
     sys_tick = 0;
 
     SYST_CSR = CSR_CLKSOURCE | CSR_TICKINT | CSR_ENABLE;

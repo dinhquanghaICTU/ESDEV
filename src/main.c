@@ -7,12 +7,30 @@
 
 
 void test(){
+    uart_puts("Start test\r\n");
+    
+    uart_puts("Forward 5s\r\n");
     motor_forward(30);
-    delay_ms(20);
-    // turn_left();
-    // delay_ms(100);
+    delay_ms(5000);
+    motor_stop();
+    uart_puts("Stop\r\n");
+    
+    delay_ms(500);
+    
+    uart_puts("Turn left 5s\r\n");
+    turn_left(30);
+    delay_ms(5000);
+    motor_stop();
+    uart_puts("Stop\r\n");
+    
+    delay_ms(500);
+    
+    uart_puts("Turn right 5s\r\n");
+    turn_right(30);
+    delay_ms(5000);
+    motor_stop();
+    uart_puts("Stop\r\n");
 }
-
 
 void init(void){
     pwm_init();
@@ -22,12 +40,14 @@ void init(void){
     uart_init(115200);   
 }
 
+
+
+
 int main(void)
 {
-    init();
+    init();  
+    
     test();
-    
-    
     while (1){
         char c;
         while (uart_getchar(&c)) {
