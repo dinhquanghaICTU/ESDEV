@@ -12,8 +12,8 @@ STARTUP_FILE:= startup_stm32f103c8.c
 ###################################
 #			TOOLCHAINS			
 ###################################
-TOOLCHAIN_PATH := /home/dinhquangha/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi/bin
-PREFIX_TOOLCHAINS	:= arm-none-eabi
+TOOLCHAIN_PATH := /c/toolchain/bin
+PREFIX_TOOLCHAINS := arm-none-eabi
 GCC					:= $(TOOLCHAIN_PATH)/$(PREFIX_TOOLCHAINS)-gcc
 CP					:= $(TOOLCHAIN_PATH)/$(PREFIX_TOOLCHAINS)-objcopy
 ASM 				:= $(TOOLCHAIN_PATH)/$(PREFIX_TOOLCHAINS)-as
@@ -31,13 +31,15 @@ LINKER_DIR			:= linker
 SRC_DIRS := \
 	src \
 	hardware/src \
-	middle/src
+	middle/src \
+	third_party/ringbuff/src
 
 # Dinh nghia tat ca thu muc chua header files
 INC_DIRS := \
 	inc \
 	hardware/inc \
-	middle/inc
+	middle/inc \
+	third_party/ringbuff/inc
 
 # Them -I vao truoc moi include directory
 INCLUDES := $(addprefix -I, $(INC_DIRS))
