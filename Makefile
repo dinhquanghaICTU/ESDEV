@@ -12,12 +12,12 @@ STARTUP_FILE:= startup_stm32f103c8.c
 ###################################
 #			TOOLCHAINS			
 ###################################
-TOOLCHAIN_PATH := /c/toolchain/bin
 PREFIX_TOOLCHAINS := arm-none-eabi
-GCC					:= $(TOOLCHAIN_PATH)/$(PREFIX_TOOLCHAINS)-gcc
-CP					:= $(TOOLCHAIN_PATH)/$(PREFIX_TOOLCHAINS)-objcopy
-ASM 				:= $(TOOLCHAIN_PATH)/$(PREFIX_TOOLCHAINS)-as
-SIZE				:= $(TOOLCHAIN_PATH)/$(PREFIX_TOOLCHAINS)-size
+
+GCC  := $(PREFIX_TOOLCHAINS)-gcc
+CP   := $(PREFIX_TOOLCHAINS)-objcopy
+ASM  := $(PREFIX_TOOLCHAINS)-as
+SIZE := $(PREFIX_TOOLCHAINS)-size
 
 
 ####################################
@@ -33,6 +33,7 @@ SRC_DIRS := \
 	hardware/src \
 	middle/src \
 	third_party/ringbuff/src
+	
 
 # Dinh nghia tat ca thu muc chua header files
 INC_DIRS := \

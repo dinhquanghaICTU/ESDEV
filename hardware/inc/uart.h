@@ -23,21 +23,13 @@
 #define SYSCLK        8000000
 
 void uart_init(uint32_t baud);
-
-void uart_putchar(char c);
-
+void uart_sendchar(char c);
 uint8_t uart_getchar(char *c);
-
-void uart_puts(const char *str);
-
+void uart_sendstr(const char *str);
 void uart_send_array(const char *arr, uint32_t len);
-
 uint8_t uart_available(void);
-
 uint32_t uart_rx_count(void);
-
 void USART1_IRQHandler(void);
-
 extern volatile uint32_t sys_tick;
 
-#endif // UART_H
+#endif // __UART_H__

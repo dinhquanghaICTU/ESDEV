@@ -7,29 +7,29 @@
 
 
 void test(){
-    uart_puts("Start test\r\n");
+    // uart_sendstr("Start test\r\n");
     
-    uart_puts("Forward 5s\r\n");
-    motor_forward(30);
-    delay_ms(5000);
-    motor_stop();
-    uart_puts("Stop\r\n");
+    // uart_sendstr("Forward 5s\r\n");
+    // motor_forward(30);
+    // delay_ms(5000);
+    // motor_stop();
+    // uart_sendstr("Stop\r\n");
     
-    delay_ms(500);
+    // delay_ms(500);
     
-    uart_puts("Turn left 5s\r\n");
-    turn_left(30);
-    delay_ms(5000);
-    motor_stop();
-    uart_puts("Stop\r\n");
+    // uart_sendstr("Turn left 5s\r\n");
+    // turn_left(30);
+    // delay_ms(5000);
+    // motor_stop();
+    // uart_sendstr("Stop\r\n");
     
-    delay_ms(500);
+    // delay_ms(500);
     
-    uart_puts("Turn right 5s\r\n");
-    turn_right(30);
-    delay_ms(5000);
-    motor_stop();
-    uart_puts("Stop\r\n");
+    // uart_sendstr("Turn right 5s\r\n");
+    // turn_right(30);
+    // delay_ms(5000);
+    // motor_stop();
+    // uart_sendstr("Stop\r\n");
 }
 
 void init(void){
@@ -41,8 +41,6 @@ void init(void){
 }
 
 
-
-
 int main(void)
 {
     init();  
@@ -51,8 +49,8 @@ int main(void)
     while (1){
         char c;
         while (uart_getchar(&c)) {
-            uart_putchar(c);
-            if (c == '\r') uart_putchar('\n');
+            uart_sendchar(c);
+            if (c == '\r') uart_sendchar('\n');
         }
     }
 }

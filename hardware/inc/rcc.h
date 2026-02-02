@@ -24,7 +24,8 @@ typedef struct {
 #define RCC_APB2ENR_IOPBEN  (1u << 3)   // GPIOB clock enable
 #define RCC_APB2ENR_IOPCEN  (1u << 4)   // GPIOC clock enable
 
-#define RCC_APB1ENR_TIM2 (1u << 0) 
+// #define RCC_APB1ENR_TIM2 (1u << 0)
+// #define RCC_APB1ENR_I2C (1u << 21)
 
 
 #endif //__RCC_H__

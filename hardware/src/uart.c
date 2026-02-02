@@ -14,7 +14,7 @@ void uart_init(uint32_t baud) {
     USART1_CR1 = USART_UE | USART_TE | USART_RE | USART_RXNEIE;
 }
 
-void uart_putchar(char c) {
+void uart_sendchar(char c) {
     while (!(USART1_SR & USART_TXE));
     USART1_DR = c;
 }
@@ -23,15 +23,15 @@ uint8_t uart_getchar(char *c) {
     return ring_buffer_read(&rx_buffer, c);
 }
 
-void uart_puts(const char *str) {
+void uart_sendstr(const char *str) {
     while (*str) {
-        uart_putchar(*str++);
+        uart_sendchar(*str++);
     }
 }
 
 void uart_send_array(const char *arr, uint32_t len) {
     for (uint32_t i = 0; i < len; i++) {
-        uart_putchar(arr[i]);
+        uart_sendchar(arr[i]);
     }
 }
 

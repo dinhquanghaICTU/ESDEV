@@ -26,6 +26,11 @@ typedef struct {
 #define GPIO_MODE_OUTPUT_PP_10MHZ   0x1u
 #define GPIO_MODE_OUTPUT_PP_50MHZ   0x3u
 
+#define GPIO_CNF_GP_PP           0x0u
+#define GPIO_CNF_GP_OD           0x1u
+#define GPIO_CNF_AF_PP           0x2u
+#define GPIO_CNF_AF_OD           0x3u
+
 void gpio_pin_init(GPIO_TypeDef *gpio, uint8_t pin, uint8_t mode);
 void gpio_write_pin(GPIO_TypeDef *gpio, uint8_t pin, uint8_t value);
 void gpio_toggle_pin(GPIO_TypeDef *gpio, uint8_t pin);
