@@ -65,8 +65,14 @@ ALL_OBJECTS := $(C_OBJECTS) $(STARTUP_OBJECT)
 ####################################
 #			FLAGS
 ####################################
-CFLAGS	:= -mcpu=$(MCU) -mthumb -Wall -O0 -g3 -ffreestanding -nostdlib $(INCLUDES)
-LDFLAGS := -T$(LINKER_DIR)/$(LD_SCRIPT) -nostdlib -Wl,-Map=$(BUILD_DIR)/$(PROJECT).map
+CFLAGS  := -mcpu=$(MCU) -mthumb -Wall -O0 -g3 -ffreestanding $(INCLUDES)
+
+LDFLAGS := -mcpu=$(MCU) -mthumb \
+           -T$(LINKER_DIR)/$(LD_SCRIPT) \
+           -Wl,-Map=$(BUILD_DIR)/$(PROJECT).map \
+           -nostartfiles \
+           -lc -lm -lnosys
+
  
 
 ####################################

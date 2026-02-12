@@ -20,7 +20,7 @@ SECTIONS
     _etext = .;
   } > FLASH
 
-  .data : AT (ADDR(.text) + SIZEOF(.text))
+  .data : AT (_etext)
   {
     _sdata = .;
     *(.data*)
@@ -33,5 +33,19 @@ SECTIONS
     *(.bss*)
     *(COMMON)
     _ebss = .;
+  } > SRAM
+
+  /* ===== Heap & Stack ===== */
+
+  ._user_heap_stack :
+  {
+    . = ALIGN(8);
+    _end = .;
+    PROVIDE(end = .);
+
+    . = . + 0x400;   /* 1KB heap */
+    . = ALIGN(8);
+
+    _estack = ORIGIN(SRAM) + LENGTH(SRAM);
   } > SRAM
 }

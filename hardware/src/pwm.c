@@ -1,7 +1,5 @@
 #include "pwm.h"
 
-
-
 void pwm_init(void) {
     RCC_APB2ENR |= RCC_IOPAEN;
     RCC_APB1ENR |= RCC_TIM3EN;
@@ -22,8 +20,6 @@ void pwm_init(void) {
     TIM3_CCR1 = 0;
     TIM3_CCR2 = 0;
 }
-
-
 
 void pwm_set_duty(uint8_t channel, uint8_t duty) {
     if (duty > 100) duty = 100;

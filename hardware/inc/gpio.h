@@ -21,7 +21,7 @@ typedef struct {
 #define GPIOB       ((GPIO_TypeDef *)GPIOB_BASE)
 #define GPIOC       ((GPIO_TypeDef *)GPIOC_BASE)
 
-// GPIO Mode
+// GPIO mode/cnf bitfields (MODE[1:0] | CNF[1:0] in lower 4 bits)
 #define GPIO_MODE_OUTPUT_PP_2MHZ    0x2u
 #define GPIO_MODE_OUTPUT_PP_10MHZ   0x1u
 #define GPIO_MODE_OUTPUT_PP_50MHZ   0x3u
@@ -30,6 +30,10 @@ typedef struct {
 #define GPIO_CNF_GP_OD           0x1u
 #define GPIO_CNF_AF_PP           0x2u
 #define GPIO_CNF_AF_OD           0x3u
+
+// Helper macros: full 4-bit config value for one pin
+// For I2C we cần Alternate Function Open-Drain 50MHz → MODE=0b11, CNF=0b11 → 0xF
+#define GPIO_MODE_AF_OD_50MHZ   ((GPIO_CNF_AF_OD << 2) | GPIO_MODE_OUTPUT_PP_50MHZ)
 
 void gpio_pin_init(GPIO_TypeDef *gpio, uint8_t pin, uint8_t mode);
 void gpio_write_pin(GPIO_TypeDef *gpio, uint8_t pin, uint8_t value);
