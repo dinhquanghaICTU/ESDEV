@@ -1,8 +1,9 @@
 #include "gpio.h"
 #include "rcc.h"
+#include "uart.h"
 
 void gpio_pin_init(GPIO_TypeDef *gpio, uint8_t pin, uint8_t mode) {
-   
+    // uart_sendstr("da vao day\r\n");
     if(gpio == GPIOA) {
         RCC->APB2ENR |= (1u << 2);  
     } else if(gpio == GPIOB) {

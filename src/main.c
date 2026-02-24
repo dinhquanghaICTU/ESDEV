@@ -11,7 +11,18 @@
 
 int main(void)
 {
-
+    // uart_init(115200); 
     app_init();
     app_run();
+    
+    // char c;
+    // while (1)
+    // {
+    //      uart_sendstr("test log \r\n");
+    //     while (uart_getchar(&c)) {
+    //         uart_sendchar(c);
+    //         if (c == '\r') uart_sendchar('\n');
+    //     }
+    // }
+    
 }

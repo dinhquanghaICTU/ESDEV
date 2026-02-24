@@ -4,8 +4,9 @@
 
 // Mặc định I2C1 trên STM32F1 dùng PB6 (SCL), PB7 (SDA)
 // Nếu bạn muốn dùng PB8/PB9 thì bật lại remap và đổi 2 define này.
-#define SCL_PIN 6  // PB7
-#define SDA_PIN 7  // PB6
+#define MPU_SCL_PIN 6  // PB7
+#define MPU_SDA_PIN 7  // PB6
+
 
 
 #define I2C_TIMEOUT 10000 
@@ -19,8 +20,8 @@ void i2c_init(void) {
     AFIO->MAPR &= ~AFIO_MAPR_I2C1_REMAP;  
 
     // Cấu hình PB6, PB7: Alternate Function Open-Drain, 50MHz cho I2C1
-    gpio_pin_init(GPIOB, SCL_PIN, GPIO_MODE_AF_OD_50MHZ);
-    gpio_pin_init(GPIOB, SDA_PIN, GPIO_MODE_AF_OD_50MHZ);
+    gpio_pin_init(GPIOB, MPU_SCL_PIN, GPIO_MODE_AF_OD_50MHZ);
+    gpio_pin_init(GPIOB, MPU_SDA_PIN, GPIO_MODE_AF_OD_50MHZ);
 
     I2C1->CR1 |= (1U << 15);
     I2C1->CR1 &= ~(1U << 15);

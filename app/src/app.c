@@ -7,6 +7,7 @@
 #include "pwm.h"
 #include "i2c.h"
 #include "MPU.h"
+#include "RGB_senser.h"
 #include <stdio.h>
 
 
@@ -51,9 +52,10 @@ void app_init(){
     pwm_init();
     i2c_init();
     mpu6050_init();
-    calibrate_gyro();
+    // calibrate_gyro();
     led_init();        
     motor_init();
+    rgb_sensor_init();
     uart_init(115200); 
 }
 
@@ -62,11 +64,14 @@ void app_run(){
     char buffer[128];
     while (1){
         motor_forward(50);
-        mpu6050_read_all(&sensor_data);
-        int16_t gz = sensor_data.gyro_z - gz_offset;
-        sprintf(buffer,"%7d\r\n", gz);
-        uart_sendstr(buffer);
-        checkquay(gz);
+        // mpu6050_read_all(&sensor_data);
+        // int16_t gz = sensor_data.gyro_z - gz_offset;
+        // sprintf(buffer,"%7d\r\n", gz);
+        // uart_sendstr(buffer);
+        // checkquay(gz);
+        // rgb_turn_on_led();
+        rgb_read_color();
+        delay_ms(100);
         char c;
         while (uart_getchar(&c)) {
             uart_sendchar(c);
