@@ -1,9 +1,11 @@
 #include "mpu.h"
 #include "i2c.h"
 #include "uart.h"
+#include "systick.h"
 
 void mpu6050_init(void) {
     mpu6050_write_byte(MPU6050_PWR_MGMT_1, 0x00);
+    delay_ms(100);
     // mpu6050_write_byte(MPU6050_SMPLRT_DIV, 0x07);
     mpu6050_write_byte(MPU6050_SMPLRT_DIV, 0x09); 
     // mpu6050_write_byte(MPU6050_CONFIG, 0x00);

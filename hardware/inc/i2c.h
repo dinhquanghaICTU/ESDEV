@@ -63,5 +63,6 @@ void i2c_send_address(uint8_t address, uint8_t direction);
 void i2c_write(uint8_t data);
 uint8_t i2c_read_ack(void);
 uint8_t i2c_read_nack(void);
+// void i2c_bus_recovery(void);
 
 #endif // __I2C_H__

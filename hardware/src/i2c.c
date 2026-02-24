@@ -1,6 +1,7 @@
 #include "i2c.h"
 #include "rcc.h"
 #include "gpio.h"
+#include "systick.h"
 
 // Mặc định I2C1 trên STM32F1 dùng PB6 (SCL), PB7 (SDA)
 // Nếu bạn muốn dùng PB8/PB9 thì bật lại remap và đổi 2 define này.
@@ -27,8 +28,8 @@ void i2c_init(void) {
     I2C1->CR1 &= ~(1U << 15);
     I2C1->CR1 &= ~I2C_CR1_PE;
     I2C1->CR2 = 36;
-    I2C1->CCR = 180;
-    I2C1->TRISE = 37;
+    I2C1->CCR = 30;
+    I2C1->TRISE = 11;
     I2C1->CR1 |= I2C_CR1_PE;
 }
 
@@ -101,3 +102,20 @@ uint8_t i2c_read_nack(void) {
     
     return I2C1->DR;
 }
+
+// void i2c_bus_recovery(void)
+// {
+//     gpio_pin_init(GPIOB, 6, GPIO_MODE_AF_OD_50MHZ);
+//     gpio_pin_init(GPIOB, 7, GPIO_MODE_AF_OD_50MHZ);
+
+//     for(int i = 0; i < 9; i++)
+//     {
+//         gpio_write_pin(GPIOB, 6, 1);
+//         delay_ms(1);
+//         gpio_write_pin(GPIOB, 6, 0);
+//         delay_ms(1);
+//     }
+
+//     gpio_write_pin(GPIOB, 6, 1);
+//     gpio_write_pin(GPIOB, 7, 1);
+// }

@@ -31,20 +31,20 @@ void checkquay(int16_t gz)
     motor_stop();
     if (gz > 20){
         uart_sendstr("quay trai\r\n");
-        turn_right(50);
-        delay_ms(3000);
-        motor_stop();
+        // turn_right(50);
+        // delay_ms(3000);
+        // motor_stop();
     }
     else if (gz < -20){
         uart_sendstr("quay phai\r\n");
-        turn_left(50);
-        delay_ms(3000);
-        motor_stop();
+        // turn_left(50);
+        // delay_ms(3000);
+        // motor_stop();
     }
     else{
         uart_sendstr("khong quay\r\n");
     }
-    delay_ms(100);
+    // delay_ms(200);
 }
 
 void app_init(){
@@ -52,7 +52,8 @@ void app_init(){
     pwm_init();
     i2c_init();
     mpu6050_init();
-    // calibrate_gyro();
+    // delay_ms(3000);
+    calibrate_gyro();
     led_init();        
     motor_init();
     rgb_sensor_init();
@@ -63,15 +64,16 @@ void app_run(){
     MPU6050_Data sensor_data;
     char buffer[128];
     while (1){
-        motor_forward(50);
-        // mpu6050_read_all(&sensor_data);
-        // int16_t gz = sensor_data.gyro_z - gz_offset;
-        // sprintf(buffer,"%7d\r\n", gz);
-        // uart_sendstr(buffer);
-        // checkquay(gz);
+        // motor_forward(35);
+        // uart_sendstr("test log \r\n");
+        mpu6050_read_all(&sensor_data);
+        int16_t gz = sensor_data.gyro_z - gz_offset;
+        sprintf(buffer,"%7d\r\n", gz);
+        uart_sendstr(buffer);
+        checkquay(gz);
         // rgb_turn_on_led();
         rgb_read_color();
-        delay_ms(100);
+        delay_ms(200);
         char c;
         while (uart_getchar(&c)) {
             uart_sendchar(c);
