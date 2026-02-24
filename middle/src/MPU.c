@@ -4,8 +4,10 @@
 
 void mpu6050_init(void) {
     mpu6050_write_byte(MPU6050_PWR_MGMT_1, 0x00);
-    mpu6050_write_byte(MPU6050_SMPLRT_DIV, 0x07);
-    mpu6050_write_byte(MPU6050_CONFIG, 0x00);
+    // mpu6050_write_byte(MPU6050_SMPLRT_DIV, 0x07);
+    mpu6050_write_byte(MPU6050_SMPLRT_DIV, 0x09); 
+    // mpu6050_write_byte(MPU6050_CONFIG, 0x00);
+    mpu6050_write_byte(MPU6050_CONFIG, 0x03); 
     mpu6050_write_byte(MPU6050_GYRO_CONFIG, 0x00);
     mpu6050_write_byte(MPU6050_ACCEL_CONFIG, 0x00);
 }
@@ -53,4 +55,12 @@ void mpu6050_read_all(MPU6050_Data *data) {
     data->gyro_z  = (int16_t)(buffer[12] << 8 | buffer[13]);
 
     
+}
+
+int16_t mpu6050_read_gz()
+{
+    MPU6050_Data mpu;
+    mpu6050_read_all(&mpu);
+    int16_t gz = mpu.gyro_z;
+    return gz;
 }

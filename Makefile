@@ -30,17 +30,21 @@ LINKER_DIR			:= linker
 # Dinh nghia tat ca thu muc chua source code
 SRC_DIRS := \
 	src \
+	app/src \
 	hardware/src \
 	middle/src \
 	third_party/ringbuff/src
+	
 	
 
 # Dinh nghia tat ca thu muc chua header files
 INC_DIRS := \
 	inc \
+	app/inc \
 	hardware/inc \
 	middle/inc \
 	third_party/ringbuff/inc
+	
 
 # Them -I vao truoc moi include directory
 INCLUDES := $(addprefix -I, $(INC_DIRS))

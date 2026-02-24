@@ -30,5 +30,6 @@ void mpu6050_init(void);
 uint8_t mpu6050_read_byte(uint8_t reg);
 void mpu6050_write_byte(uint8_t reg, uint8_t data);
 void mpu6050_read_all(MPU6050_Data *data);
+int16_t mpu6050_read_gz();
 
 #endif //#define __MPU_H__
