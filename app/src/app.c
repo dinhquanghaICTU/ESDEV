@@ -73,7 +73,7 @@ void app_run(){
         checkquay(gz);
         // rgb_turn_on_led();
         rgb_read_color();
-        delay_ms(200);
+        delay_ms(500);
         char c;
         while (uart_getchar(&c)) {
             uart_sendchar(c);

@@ -1525,7 +1525,7 @@ LOAD linker stubs
  .debug_macro   0x000025cb       0x67 build/obj/motor.o
  .debug_macro   0x00002632       0x34 build/obj/ringbuff.o
 
-.debug_line     0x00000000     0x1467
+.debug_line     0x00000000     0x1465
  .debug_line    0x00000000      0x1c9 build/obj/main.o
  .debug_line    0x000001c9       0xc7 build/obj/startup_stm32f103c8.o
  .debug_line    0x00000290      0x2ea build/obj/app.o
@@ -1535,10 +1535,10 @@ LOAD linker stubs
  .debug_line    0x00000a85       0xeb build/obj/systick.o
  .debug_line    0x00000b70      0x18d build/obj/uart.o
  .debug_line    0x00000cfd      0x1a3 build/obj/MPU.o
- .debug_line    0x00000ea0      0x27b build/obj/RGB_senser.o
- .debug_line    0x0000111b       0xe3 build/obj/led.o
- .debug_line    0x000011fe      0x11e build/obj/motor.o
- .debug_line    0x0000131c      0x14b build/obj/ringbuff.o
+ .debug_line    0x00000ea0      0x279 build/obj/RGB_senser.o
+ .debug_line    0x00001119       0xe3 build/obj/led.o
+ .debug_line    0x000011fc      0x11e build/obj/motor.o
+ .debug_line    0x0000131a      0x14b build/obj/ringbuff.o
 
 .debug_str      0x00000000     0x8454
  .debug_str     0x00000000     0x8454 build/obj/main.o

@@ -13,6 +13,7 @@ void Reset_Handler(void);
 void Default_Handler(void);
 void SysTick_Handler(void);
 void USART1_IRQHandler(void);
+void USARTesp_IRQHandler(void);
 
 /* vector table */
 __attribute__((section(".isr_vector")))
@@ -71,7 +72,7 @@ void (* const vector_table[])(void) = {
     Default_Handler,           // 52 SPI2
     USART1_IRQHandler,         // 53 USART1 ← QUAN TRỌNG!
     Default_Handler,           // 54 USART2
-    Default_Handler,           // 55 USART3
+    USARTesp_IRQHandler,           // 55 USART3
     Default_Handler,           // 56 EXTI15_10
     Default_Handler,           // 57 RTCAlarm
     Default_Handler,           // 58 USBWakeup
@@ -103,3 +104,4 @@ void Default_Handler(void)
 // Weak aliases
 void SysTick_Handler(void) __attribute__((weak, alias("Default_Handler")));
 void USART1_IRQHandler(void) __attribute__((weak, alias("Default_Handler")));
+void USARTesp_IRQHandler(void) __attribute__((weak, alias("Default_Handler")));

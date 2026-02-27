@@ -5,7 +5,7 @@ static RingBuffer rx_buffer;
 
 void uart_init(uint32_t baud) {
     ring_buffer_init(&rx_buffer);
-    RCC_APB2ENR |= RCC_IOPAEN | RCC_USART1EN;
+    RCC_APB2ENR |= RCC_IOPAEN| RCC_USART1EN;
     GPIOA_CRH &= ~(0xFF << 4);
     GPIOA_CRH |= (0x0B << 4);  
     GPIOA_CRH |= (0x04 << 8);  
