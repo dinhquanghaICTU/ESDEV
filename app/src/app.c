@@ -9,9 +9,10 @@
 #include "MPU.h"
 #include "RGB_senser.h"
 #include "uart_esp32.h"
+#include "pid.h"
 #include <stdio.h>
 
-#define speed 100 
+#define speed 70 
 
 
 int16_t gz_offset = 0;
@@ -31,30 +32,27 @@ void calibrate_gyro()
 
 void checkquay(int16_t gz)
 {
-    motor_stop();
-    delay_ms(2000);
-    if (gz > 20){
-        uart_sendstr("quay trai\r\n");
-        turn_right(speed);
-        delay_ms(1000);
-        motor_stop();
-    }
-    else if (gz < -20){
-        uart_sendstr("quay phai\r\n");
-        turn_left(speed);
-        delay_ms(1000);
-        motor_stop();
-    }
-    else{
-        uart_sendstr("khong quay\r\n");
-    }
-    delay_ms(200);
+    uart_sendstr("debug \r\n=============");
+    float gz_scaled = gz * 0.01f;
+
+    float correction = PID_Update(&pid, 0, gz_scaled);
+
+    int base_speed = speed;
+
+    int left_speed  = base_speed + correction;
+    int right_speed = base_speed - correction;
+
+    if(left_speed > 100) left_speed = 100;
+    if(left_speed < 0)   left_speed = 0;
+
+    if(right_speed > 100) right_speed = 100;
+    if(right_speed < 0)   right_speed = 0;
+
+    turn_left(left_speed);
+    turn_right(right_speed);
 }
 
 
-// void checkmau(int16_t ){
-
-// }
 
 void app_init(){
     systick_init();  
@@ -66,7 +64,7 @@ void app_init(){
     uartesp_init(115200);
     led_init();        
     motor_init();
-    rgb_sensor_init();
+    // rgb_sensor_init();
     uart_init(115200); 
 }
 
@@ -77,15 +75,15 @@ void app_run(){
     {
         motor_forward(speed);
         // uart_sendstr("test log \r\n");
-        mpu6050_read_all(&sensor_data);
-        int16_t gz = sensor_data.gyro_z - gz_offset;
-        sprintf(buffer,"%7d\r\n", gz);
-        uart_sendstr(buffer);
-        checkquay(gz);
+        // mpu6050_read_all(&sensor_data);
+        // int16_t gz = sensor_data.gyro_z - gz_offset;
+        // sprintf(buffer,"%7d\r\n", gz);
+        // uart_sendstr(buffer);
+        // checkquay(gz);
         // rgb_turn_on_led();
         // delay_ms(1000);
-        rgb_read_color();
-        delay_ms(1000);
+        // rgb_read_color();
+        delay_ms(1000); 
         char c;
         while (uart_getchar(&c)) {
             uart_sendchar(c);

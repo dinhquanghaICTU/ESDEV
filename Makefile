@@ -33,7 +33,8 @@ SRC_DIRS := \
 	app/src \
 	hardware/src \
 	middle/src \
-	third_party/ringbuff/src
+	third_party/ringbuff/src \
+	third_party/PID/src \
 	
 	
 
@@ -43,7 +44,8 @@ INC_DIRS := \
 	app/inc \
 	hardware/inc \
 	middle/inc \
-	third_party/ringbuff/inc
+	third_party/ringbuff/inc \
+	third_party/PID/inc \
 	
 
 # Them -I vao truoc moi include directory

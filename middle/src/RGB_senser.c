@@ -58,17 +58,43 @@
         return (high << 8) | low;
     }
 
-    
+    void checkcolor(uint16_t r, uint16_t g, uint16_t b)
+    {
+
+        
+        float sum = r + g + b;
+        float rn = r / sum;
+        float gn = g / sum;
+        float bn = b / sum;
+
+        if(bn > rn && bn > gn)
+            uart_sendstr("BLUE\r\n");
+
+        else if(gn > rn && gn > bn)
+            uart_sendstr("GREEN\r\n");
+
+        else if(rn > gn && rn > bn)
+            uart_sendstr("RED\r\n");
+    }
+
+    uint16_t clear;
+    uint16_t red;
+    uint16_t green;
+    uint16_t blue;
 
     void rgb_read_color(void)
     {
-        uint16_t clear = rgb_read_16(0x14);
-        uint16_t red   = rgb_read_16(0x16);
-        uint16_t green = rgb_read_16(0x18);
-        uint16_t blue  = rgb_read_16(0x1A);
+        clear = rgb_read_16(0x14);
+        red   = rgb_read_16(0x16);
+        green = rgb_read_16(0x18);
+        blue  = rgb_read_16(0x1A);
 
         char buffer[100];
-        sprintf(buffer,"C:%5u R:%5u G:%5u B:%5u\r\n",clear, red, green, blue);
+        //C:%5u
+        
+        sprintf(buffer," R:%5u G:%5u B:%5u\r\n",clear, red, green, blue);
         uart_sendstr(buffer);
-        return
+        checkcolor(red, green, blue);
+    
+        
     }
