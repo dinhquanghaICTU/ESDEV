@@ -26,6 +26,20 @@ typedef struct {
 #define GPIO_MODE_OUTPUT_PP_10MHZ   0x1u
 #define GPIO_MODE_OUTPUT_PP_50MHZ   0x3u
 
+
+
+// Input modes
+#define GPIO_MODE_INPUT              0x0u
+#define GPIO_CNF_INPUT_ANALOG        0x0u
+#define GPIO_CNF_INPUT_FLOATING      0x1u
+#define GPIO_CNF_INPUT_PU_PD         0x2u
+
+// AF output 50MHz
+#define GPIO_MODE_AF_PP_50MHZ   ((GPIO_CNF_AF_PP << 2) | GPIO_MODE_OUTPUT_PP_50MHZ)
+
+// Input floating (RX)
+#define GPIO_MODE_INPUT_FLOATING  ((GPIO_CNF_INPUT_FLOATING << 2) | GPIO_MODE_INPUT)
+
 #define GPIO_CNF_GP_PP           0x0u
 #define GPIO_CNF_GP_OD           0x1u
 #define GPIO_CNF_AF_PP           0x2u

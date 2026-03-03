@@ -58,6 +58,8 @@
         return (high << 8) | low;
     }
 
+    
+
     void rgb_read_color(void)
     {
         uint16_t clear = rgb_read_16(0x14);
@@ -66,10 +68,7 @@
         uint16_t blue  = rgb_read_16(0x1A);
 
         char buffer[100];
-
-        sprintf(buffer,
-                "C:%5u R:%5u G:%5u B:%5u\r\n",
-                clear, red, green, blue);
-
+        sprintf(buffer,"C:%5u R:%5u G:%5u B:%5u\r\n",clear, red, green, blue);
         uart_sendstr(buffer);
+        return
     }

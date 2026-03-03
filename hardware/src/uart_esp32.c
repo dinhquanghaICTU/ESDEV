@@ -5,17 +5,20 @@
 static RingBuffer rx_buffer;
 
 
-// tx : pb10 
-// rx:  pb11
+// tx : pb10 (USART3_TX)
+// rx:  pb11 (USART3_RX)
 void uartesp_init(uint32_t baud) {
     ring_buffer_init(&rx_buffer);
-    RCC_APB2ENR |= RCC_IOPBEN ;
-    RCC_APB1ENR |= RCC_USART3EN; 
-    gpio_pin_init(GPIOB,UART3_TX,GPIO_CNF_AF_PP);
-    gpio_pin_init(GPIOB,UART3_RX,GPIO_CNF_AF_PP);
+    RCC_APB2ENR |= RCC_IOPBEN;
+    RCC_APB1ENR |= RCC_USART3EN;
+
+    // USART3 TX/RX on GPIOB
+    gpio_pin_init(GPIOB, UART3_TX, GPIO_MODE_AF_PP_50MHZ);
+    gpio_pin_init(GPIOB, UART3_RX, GPIO_MODE_INPUT_FLOATING);
 
     UART3->BRR = 8000000 / baud;
-    NVIC_ISER1 |= (1 << 7); 
+    // USART3 IRQ number = 39 -> NVIC_ISER1 bit (39 - 32) = 7
+    NVIC_ISER1 |= (1 << 7);
     UART3->CR1 = USART3_UE | USART3_TE | USART3_RE | USART3_RXNEIE;
 }
 
@@ -30,7 +33,7 @@ uint8_t uartesp_getchar(char *c) {
 
 void uartesp_sendstr(const char *str) {
     while (*str) {
-        uart_sendchar(*str++);
+        uartesp_sendchar(*str++);
     }
 }
 
@@ -40,17 +43,19 @@ void uartesp_sendstr(const char *str) {
 //     }
 // }
 
-uint8_t uart_available(void) {
+uint8_t uartesp_available(void) {
     return ring_buffer_available(&rx_buffer);
 }
 
-uint32_t uart_rx_count(void) {
+uint32_t uartesp_rx_count(void) {
     return ring_buffer_count(&rx_buffer);
 }
 
-void USARTesp_IRQHandler(void) {
-    if ( UART3->SR & USART3_RXNE) {
-        char c = UART3->DR;
+void USART3_IRQHandler(void)
+{
+    if (UART3->SR & USART3_RXNE)
+    {
+        char c = (char)UART3->DR;
         ring_buffer_write(&rx_buffer, c);
     }
 }

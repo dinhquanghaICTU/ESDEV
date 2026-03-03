@@ -29,9 +29,19 @@ void motor_init(void) {
 }
 
 void motor_forward(uint8_t speed) {
-     uart_sendstr("thang \r\n");
+    uart_sendstr("thang \r\n");
     gpio_write_pin(GPIOA, MOTOR_A_IN1_PIN, 0);  
     gpio_write_pin(GPIOA, MOTOR_A_IN2_PIN, 1);
+    gpio_write_pin(GPIOA, MOTOR_B_IN3_PIN, 1);
+    gpio_write_pin(GPIOA, MOTOR_B_IN4_PIN, 0); 
+    
+    pwm_set_duty(1, speed); 
+    pwm_set_duty(2, speed); 
+}
+
+void motor_backward(uint8_t speed) {
+    gpio_write_pin(GPIOA, MOTOR_A_IN1_PIN, 1);  
+    gpio_write_pin(GPIOA, MOTOR_A_IN2_PIN, 0);
     gpio_write_pin(GPIOA, MOTOR_B_IN3_PIN, 0);
     gpio_write_pin(GPIOA, MOTOR_B_IN4_PIN, 1); 
     
@@ -39,29 +49,19 @@ void motor_forward(uint8_t speed) {
     pwm_set_duty(2, speed); 
 }
 
-void motor_backward(uint8_t speed) {
-    gpio_write_pin(GPIOA, MOTOR_A_IN1_PIN, 1);
-    gpio_write_pin(GPIOA, MOTOR_A_IN2_PIN, 0);
-    gpio_write_pin(GPIOA, MOTOR_B_IN3_PIN, 1);
-    gpio_write_pin(GPIOA, MOTOR_B_IN4_PIN, 0);
-    
-    pwm_set_duty(1, speed); 
-    pwm_set_duty(2, speed); 
-}
-
 void turn_left(uint8_t speed) {
      uart_sendstr("trai \r\n");
-    gpio_write_pin(GPIOA, MOTOR_A_IN1_PIN, 0);  // Trái dừng
+    gpio_write_pin(GPIOA, MOTOR_A_IN1_PIN, 0);  
     gpio_write_pin(GPIOA, MOTOR_A_IN2_PIN, 0);
-    gpio_write_pin(GPIOA, MOTOR_B_IN3_PIN, 0);  // Phải tiến
-    gpio_write_pin(GPIOA, MOTOR_B_IN4_PIN, 1);
+    gpio_write_pin(GPIOA, MOTOR_B_IN3_PIN, 1);  
+    gpio_write_pin(GPIOA, MOTOR_B_IN4_PIN, 0);
     
-    pwm_set_duty(1, 0);      // ENA - Motor trái tắt
-    pwm_set_duty(2, speed);  // ENB - Motor phải chạy
+    pwm_set_duty(1, 0);      
+    pwm_set_duty(2, speed);  
 }
 
 void turn_right(uint8_t speed) {
-     uart_sendstr("phai \r\n");
+    uart_sendstr("phai \r\n");
     gpio_write_pin(GPIOA, MOTOR_A_IN1_PIN, 0);  // Trái tiến
     gpio_write_pin(GPIOA, MOTOR_A_IN2_PIN, 1);
     gpio_write_pin(GPIOA, MOTOR_B_IN3_PIN, 0);  // Phải dừng

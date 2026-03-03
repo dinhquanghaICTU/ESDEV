@@ -31,10 +31,10 @@ typedef struct
 #define USART3_RXNE    (1 << 5)
 
 
-#define USART3_BASE    0x40004800u
+#define USART3_BASE    0x40004800u          // USART3 base address
 #define UART3         ((UART3_TypeDef *)USART3_BASE)
-#define RCC_IOPBEN    (1 << 3) 
-#define RCC_USART3EN  (1 << 18) 
+#define RCC_IOPBEN    (1 << 3)             // GPIOB enable
+#define RCC_USART3EN  (1 << 18)            // USART3 enable
 
 #define NVIC_ISER1    (*(volatile uint32_t*)0xE000E104)
 
@@ -44,8 +44,8 @@ void uartesp_sendchar(char c);
 uint8_t uartesp_getchar(char *c);
 void uartesp_sendstr(const char *str);
 // void uartesp_send_array(const char *arr, uint32_t len);
-uint8_t uart_available(void);
-uint32_t uart_rx_count(void);
-void USARTesp_IRQHandler(void);
+uint8_t uartesp_available(void);
+uint32_t uartesp_rx_count(void);
+void USART3_IRQHandler(void);
 
 #endif // __UART_ESP_32_H__
