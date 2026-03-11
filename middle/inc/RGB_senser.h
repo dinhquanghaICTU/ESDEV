@@ -23,15 +23,14 @@
 
 #define RGB_LED_PIN 13
 
-void rgb_turn_on_led();
+// void rgb_turn_on_led();
 void rgb_sensor_init(void);
 
 void rgb_write_byte(uint8_t reg, uint8_t data);
-
 uint8_t rgb_read_byte(uint8_t reg);
 uint16_t rgb_read_16(uint8_t reg_low);
-void rgb_read_color(void);
-void checkcolor(uint16_t r, uint16_t g, uint16_t b);
+int rgb_read_color();
+
 
 
 

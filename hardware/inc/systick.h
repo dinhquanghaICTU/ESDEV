@@ -5,5 +5,7 @@
 
 void systick_init(void);
 void delay_ms(uint32_t ms);
+uint32_t get_tick_ms(void);
+
 
 #endif //__SYSTICK_H__

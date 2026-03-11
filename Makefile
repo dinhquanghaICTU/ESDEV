@@ -40,6 +40,7 @@ SRC_DIRS := \
 
 # Dinh nghia tat ca thu muc chua header files
 INC_DIRS := \
+	src \
 	inc \
 	app/inc \
 	hardware/inc \

@@ -11,4 +11,7 @@ void turn_left(uint8_t speed);
 void turn_right(uint8_t speed);
 void motor_stop(void);
 
+
+void motor_forward_pid(uint8_t speed_left, uint8_t speed_right);
+
 #endif //__MOTOR_H__

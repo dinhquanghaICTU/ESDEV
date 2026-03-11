@@ -32,3 +32,9 @@ void delay_ms(uint32_t ms)
     uint32_t start = sys_tick;
     while ((sys_tick - start) < ms);
 }
+
+
+uint32_t get_tick_ms(void)
+{
+    return sys_tick;
+}

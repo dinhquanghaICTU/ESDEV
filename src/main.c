@@ -1,6 +1,7 @@
 
-#define TEST_LOG    1
-#define TEST_LOG_AND_RGB 0
+#include "app.h"
+#include <stdio.h>
+#include "esdev_config.h"
 
 #if(TEST_LOG)
     #include "systick.h"
@@ -9,9 +10,6 @@
     #include "i2c.h"
     #include "RGB_senser.h" 
 #endif
-
-#include "app.h"
-#include <stdio.h>
 
 int main(void)
 {
@@ -23,18 +21,18 @@ int main(void)
         uart_init(115200); 
     #endif
     
-    // app_init();
-    // app_run();
+    app_init();
+    app_run();
 
     // uart_sendstr("test log \r\n");
     #if(TEST_LOG)
         char c;
         while (1)
         {
-            // uart_sendstr("test log \r\n");
+            uart_sendstr("test log \r\n");
             #if (TEST_LOG_AND_RGB)
                 rgb_read_color();
-            
+                delay_ms(1000);
             #endif 
             while (uart_getchar(&c)) {
                 uart_sendchar(c);

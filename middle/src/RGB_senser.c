@@ -3,6 +3,7 @@
     #include "gpio.h"
     #include "systick.h"
     #include "uart.h"
+    #include "motor.h"
 
     void rgb_sensor_init(void)
     {
@@ -58,43 +59,51 @@
         return (high << 8) | low;
     }
 
-    void checkcolor(uint16_t r, uint16_t g, uint16_t b)
-    {
-
-        
-        float sum = r + g + b;
-        float rn = r / sum;
-        float gn = g / sum;
-        float bn = b / sum;
-
-        if(bn > rn && bn > gn)
-            uart_sendstr("BLUE\r\n");
-
-        else if(gn > rn && gn > bn)
-            uart_sendstr("GREEN\r\n");
-
-        else if(rn > gn && rn > bn)
-            uart_sendstr("RED\r\n");
-    }
-
     uint16_t clear;
     uint16_t red;
     uint16_t green;
     uint16_t blue;
 
-    void rgb_read_color(void)
-    {
-        clear = rgb_read_16(0x14);
-        red   = rgb_read_16(0x16);
-        green = rgb_read_16(0x18);
-        blue  = rgb_read_16(0x1A);
+   int rgb_read_color() {
+    clear = rgb_read_16(0x14);
+    red   = rgb_read_16(0x16);
+    green = rgb_read_16(0x18);
+    blue  = rgb_read_16(0x1A);
 
-        char buffer[100];
-        //C:%5u
-        
-        sprintf(buffer," R:%5u G:%5u B:%5u\r\n",clear, red, green, blue);
-        uart_sendstr(buffer);
-        checkcolor(red, green, blue);
     
-        
+    // char buffer[100];
+    // sprintf(buffer, " C:%5u R:%5u G:%5u B:%5u\r\n", clear, red, green, blue);
+    // uart_sendstr(buffer);
+
+    float sum = red + green + blue;
+    if (sum == 0) {
+        uart_sendstr("NO LIGHT\r\n");
+        return 0;
     }
+    float rn = red   / sum;
+    float gn = green / sum;
+    float bn = blue  / sum;
+    float threshold = 0.08f; 
+    if (rn > (1.0f/3 - threshold) && rn < (1.0f/3 + threshold) &&
+        gn > (1.0f/3 - threshold) && gn < (1.0f/3 + threshold) &&
+        bn > (1.0f/3 - threshold) && bn < (1.0f/3 + threshold)) {
+        uart_sendstr("WHITE\r\n");
+        return 4;
+    }
+    else if (bn > rn && bn > gn) {
+        uart_sendstr("BLUE\r\n");
+        return 1;
+    }
+    else if (gn > rn && gn > bn) {
+        uart_sendstr("GREEN\r\n");
+        return 2;
+    }
+    else if (rn > gn && rn > bn) {
+        uart_sendstr("RED\r\n");
+        return 3;
+    }
+    else {
+        uart_sendstr("WHITE\r\n");
+        return 4;
+    }
+}
