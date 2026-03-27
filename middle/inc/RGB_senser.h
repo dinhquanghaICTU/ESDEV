@@ -6,7 +6,8 @@
 #include "stdint.h"
 
 
-#define  RGB_ADDR 0x29 
+#define  RGB_ADDR  0x29
+#define  RGB2_ADDR 0x29  // Đổi sang 0x39/0x49/0x59 nếu cần trùng bus với sensor 1 
 
 
 #define TCS34725_COMMAND        0x80
@@ -30,6 +31,13 @@ void rgb_write_byte(uint8_t reg, uint8_t data);
 uint8_t rgb_read_byte(uint8_t reg);
 uint16_t rgb_read_16(uint8_t reg_low);
 int rgb_read_color();
+
+// Sensor 2 - I2C2 (PB10=SCL, PB11=SDA)
+void rgb2_sensor_init(void);
+void rgb2_write_byte(uint8_t reg, uint8_t data);
+uint8_t rgb2_read_byte(uint8_t reg);
+uint16_t rgb2_read_16(uint8_t reg_low);
+int rgb2_read_color();
 
 
 

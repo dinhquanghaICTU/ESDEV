@@ -7,7 +7,7 @@
 
 #define PID_MODE 0  // turn on pid
 
-#define TEST_COLOR_SENSOR 1 //test sensor color  
+#define TEST_COLOR_SENSOR 0 //test sensor color  
 
 
 

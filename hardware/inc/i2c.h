@@ -5,6 +5,7 @@
 
 
 #define I2C1_BASE 0x40005400U
+#define I2C2_BASE 0x40005800U
 
 
 #define RCC_APB2ENR_AFIOEN    (1U << 0)
@@ -35,9 +36,11 @@ typedef struct {
 } I2C_TypeDef;
 
 #define I2C1 ((I2C_TypeDef*)I2C1_BASE)
+#define I2C2 ((I2C_TypeDef*)I2C2_BASE)
 
 
 #define RCC_APB1ENR_I2C1EN (1U << 21)
+#define RCC_APB1ENR_I2C2EN (1U << 22)
 
 
 #define I2C_CR1_PE         (1U << 0)
@@ -63,6 +66,15 @@ void i2c_send_address(uint8_t address, uint8_t direction);
 void i2c_write(uint8_t data);
 uint8_t i2c_read_ack(void);
 uint8_t i2c_read_nack(void);
+
+// I2C2 - PB10 (SCL), PB11 (SDA)
+void i2c2_init(void);
+void i2c2_start(void);
+void i2c2_stop(void);
+void i2c2_send_address(uint8_t address, uint8_t direction);
+void i2c2_write(uint8_t data);
+uint8_t i2c2_read_ack(void);
+uint8_t i2c2_read_nack(void);
 // void i2c_bus_recovery(void);
 
 #endif // __I2C_H__
