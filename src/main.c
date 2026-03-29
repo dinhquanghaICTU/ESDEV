@@ -30,6 +30,7 @@ int main(void)
         while (1)
         {
             uart_sendstr("test log \r\n");
+            delay_ms(1000);
             #if (TEST_LOG_AND_RGB)
                 rgb_read_color();
                 delay_ms(1000);

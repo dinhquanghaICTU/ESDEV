@@ -33,7 +33,7 @@ void motor_forward(uint8_t speed) {
 
 
     // rgb_read_color();
-    uart_sendstr("thang \r\n");
+    // uart_sendstr("thang \r\n");
     gpio_write_pin(GPIOA, MOTOR_A_IN1_PIN, 0);  
     gpio_write_pin(GPIOA, MOTOR_A_IN2_PIN, 1);
     gpio_write_pin(GPIOA, MOTOR_B_IN3_PIN, 1);
@@ -54,7 +54,7 @@ void motor_backward(uint8_t speed) {
 }
 
 void turn_left(uint8_t speed) {
-     uart_sendstr("trai \r\n");
+    // uart_sendstr("trai \r\n");
     gpio_write_pin(GPIOA, MOTOR_A_IN1_PIN, 0);  
     gpio_write_pin(GPIOA, MOTOR_A_IN2_PIN, 0);
     gpio_write_pin(GPIOA, MOTOR_B_IN3_PIN, 1);  
@@ -65,7 +65,7 @@ void turn_left(uint8_t speed) {
 }
 
 void turn_right(uint8_t speed) {
-    uart_sendstr("phai \r\n");
+    // uart_sendstr("phai \r\n");
     gpio_write_pin(GPIOA, MOTOR_A_IN1_PIN, 0);  // Trái tiến
     gpio_write_pin(GPIOA, MOTOR_A_IN2_PIN, 1);
     gpio_write_pin(GPIOA, MOTOR_B_IN3_PIN, 0);  // Phải dừng

@@ -71,46 +71,52 @@
     blue  = rgb_read_16(0x1A);
 
     
-    char buffer[100];
-    sprintf(buffer, " C:%5u R:%5u G:%5u B:%5u\r\n", clear, red, green, blue);
-    uart_sendstr(buffer);
+    // char buffer[100];
+    // sprintf(buffer, "S1: C:%5u R:%5u G:%5u B:%5u\r\n", clear, red, green, blue);
+    // uart_sendstr(buffer);
+    
 
-    // float sum = red + green + blue;
-    // if (sum == 0) {
-    //     uart_sendstr("NO LIGHT\r\n");
-    //     return 0;
-    // }
-    // float rn = red   / sum;
-    // float gn = green / sum;
-    // float bn = blue  / sum;
-    // float threshold = 0.08f; 
-    // if (rn > (1.0f/3 - threshold) && rn < (1.0f/3 + threshold) &&
-    //     gn > (1.0f/3 - threshold) && gn < (1.0f/3 + threshold) &&
-    //     bn > (1.0f/3 - threshold) && bn < (1.0f/3 + threshold)) {
-    //     uart_sendstr("WHITE\r\n");
-    //     return 4;
-    // }
-    // else if (bn > rn && bn > gn) {
-    //     uart_sendstr("BLUE\r\n");
-    //     return 1;
-    // }
-    // else if (gn > rn && gn > bn) {
-    //     uart_sendstr("GREEN\r\n");
-    //     return 2;
-    // }
-    // else if (rn > gn && rn > bn) {
-    //     uart_sendstr("RED\r\n");
-    //     return 3;
-    // }
-    // else {
-    //     uart_sendstr("WHITE\r\n");
-    //     return 4;
-    // }
+   
+    float sum = red + green + blue;
+    if (sum == 0) {
+        // uart_sendstr("NO LIGHT\r\n");
+        return 0;
+    }
+    float rn = red   / sum;
+    float gn = green / sum;
+    float bn = blue  / sum;
+    float threshold = 0.08f;
+
+
+    if (rn > 0.30f && gn > 0.30f && bn < 0.10f) {
+        // uart_sendstr("YELLOW\r\n");
+        return 0;
+    }
+    else if (rn > (1.0f/3 - threshold) && rn < (1.0f/3 + threshold) &&
+        gn > (1.0f/3 - threshold) && gn < (1.0f/3 + threshold) &&
+        bn > (1.0f/3 - threshold) && bn < (1.0f/3 + threshold)) {
+        // uart_sendstr("WHITE\r\n");
+        return 4;
+    }
+    else if (bn > rn && bn > gn) {
+        // uart_sendstr("BLUE\r\n");
+        return 1;
+    }
+    else if (gn > rn && gn > bn) {
+        // uart_sendstr("GREEN\r\n");
+        return 2;
+    }
+    else if (rn > gn && rn > bn) {
+        // uart_sendstr("RED\r\n");
+        return 3;
+    }
+    else {
+        // uart_sendstr("WHITE\r\n");
+        return 4;
+    }
+   
 }
 
-// ============================================================
-// Sensor 2 - I2C2 (PB10=SCL, PB11=SDA)
-// ============================================================
 
 void rgb2_sensor_init(void)
 {
@@ -177,39 +183,47 @@ int rgb2_read_color() {
     green2 = rgb2_read_16(0x18);
     blue2  = rgb2_read_16(0x1A);
 
-    char buffer[100];
-    sprintf(buffer, "S2 C:%5u R:%5u G:%5u B:%5u\r\n", clear2, red2, green2, blue2);
-    uart_sendstr(buffer);
+    // char buffer[100];
+    // sprintf(buffer, "S2 C:%5u R:%5u G:%5u B:%5u\r\n", clear2, red2, green2, blue2);
+    // uart_sendstr(buffer);
 
-    // float sum = red2 + green2 + blue2;
-    // if (sum == 0) {
-    //     uart_sendstr("S2: NO LIGHT\r\n");
-    //     return 0;
-    // }
-    // float rn = red2   / sum;
-    // float gn = green2 / sum;
-    // float bn = blue2  / sum;
-    // float threshold = 0.08f;
-    // if (rn > (1.0f/3 - threshold) && rn < (1.0f/3 + threshold) &&
-    //     gn > (1.0f/3 - threshold) && gn < (1.0f/3 + threshold) &&
-    //     bn > (1.0f/3 - threshold) && bn < (1.0f/3 + threshold)) {
-    //     uart_sendstr("S2: WHITE\r\n");
-    //     return 4;
-    // }
-    // else if (bn > rn && bn > gn) {
-    //     uart_sendstr("S2: BLUE\r\n");
-    //     return 1;
-    // }
-    // else if (gn > rn && gn > bn) {
-    //     uart_sendstr("S2: GREEN\r\n");
-    //     return 2;
-    // }
-    // else if (rn > gn && rn > bn) {
-    //     uart_sendstr("S2: RED\r\n");
-    //     return 3;
-    // }
-    // else {
-    //     uart_sendstr("S2: WHITE\r\n");
-    //     return 4;
-    // }
+    
+    float sum = red2 + green2 + blue2;
+    if (sum == 0) {
+        // uart_sendstr("S2: NO LIGHT\r\n");
+        return 0;
+    }
+    float rn = red2   / sum;
+    float gn = green2 / sum;
+    float bn = blue2  / sum;
+    float threshold = 0.08f;
+
+
+    if (rn > 0.30f && gn > 0.30f && bn < 0.10f) {
+        // uart_sendstr("S2: YELLOW\r\n");
+        return 5;
+    }
+    else if (rn > (1.0f/3 - threshold) && rn < (1.0f/3 + threshold) &&
+        gn > (1.0f/3 - threshold) && gn < (1.0f/3 + threshold) &&
+        bn > (1.0f/3 - threshold) && bn < (1.0f/3 + threshold)) {
+        // uart_sendstr("S2: WHITE\r\n");
+        return 4;
+    }
+    else if (bn > rn && bn > gn) {
+        // uart_sendstr("S2: BLUE\r\n");
+        return 1;
+    }
+    else if (gn > rn && gn > bn) {
+        // uart_sendstr("S2: GREEN\r\n");
+        return 2;
+    }
+    else if (rn > gn && rn > bn) {
+        // uart_sendstr("S2: RED\r\n");
+        return 3;
+    }
+    else {
+        // uart_sendstr("S2: WHITE\r\n");
+        return 4;
+    }
+   
 }

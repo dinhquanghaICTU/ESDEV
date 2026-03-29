@@ -44,8 +44,14 @@ uint32_t uart_rx_count(void) {
 }
 
 void USART1_IRQHandler(void) {
-    if (USART1_SR & USART_RXNE) {
-        char c = USART1_DR;
+    uint32_t sr = USART1_SR;  
+
+    if (sr & USART_RXNE) {
+        char c = USART1_DR;   
         ring_buffer_write(&rx_buffer, c);
+    }
+    else if (sr & (1 << 3)) { 
+        volatile uint32_t dummy = USART1_DR; 
+        (void)dummy;
     }
 }
