@@ -2,8 +2,11 @@
 #define __ESDEV_CONFIG_H__
 
 //quangha_structure
-#define   SPEED_LIMIT 37
+#define   SPEED_LIMIT 40
 
+#define DELAY_HANOI 1400
+#define DELAY_CA_MAU 700 
+#define INNCREE_FORWORD 250 
 
 
 

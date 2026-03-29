@@ -28,11 +28,12 @@ typedef enum {
 } MyRGB;
 
 typedef enum {
-    HA_NOI,
+    IDLE,
     LUNG_CU,
     HOANG_XA,
     TRUONG_XA,
     CA_MAU,
+    HA_NOI,
 } Mycheckpoint;
 
 
@@ -78,20 +79,6 @@ void fsm_init(void)
 }
 
 
-void lungcu_check(void){
-    motor_stop();
-    delay_ms(1000);
-    turn_right(SPEED_LIMIT);
-    delay_ms(300);
-    if((RGB_1 == BLUE) || (RGB_2 == BLUE)){
-        uart_sendstr("BLUE1====================== \r\n");
-        motor_forward(SPEED_LIMIT);
-        delay_ms(500);
-        fsm.checkpoint = HOANG_XA;
-    }
-}
-
-
 void Quangha_structure(void){
 
     RGB_1 = rgb_read_color(); // RGB_left 
@@ -106,40 +93,30 @@ void Quangha_structure(void){
     {
     case LUNG_CU:
         if((RGB_1 == RED) && (RGB_2 == RED)){
+            motor_stop();
+            delay_ms(1000);
             motor_forward(SPEED_LIMIT);
-            delay_ms(300);
+            delay_ms(INNCREE_FORWORD);
         }
         else if (RGB_1 == WHITE)
         {
             turn_right(SPEED_LIMIT);
-            delay_ms(600);
+            delay_ms(400);
         }
         else if (RGB_2 == WHITE)
         {
             turn_left(SPEED_LIMIT);
-            delay_ms(600);
-        }
-
-        else if((RGB_2 == BLUE) && ((RGB_1 == BLUE)))
-        {
-            motor_stop();
-            delay_ms(1000);
-            // uart_sendstr("BLUE1====================== \r\n");
-            turn_right(SPEED_LIMIT);
-            delay_ms(700);
-            turn_right(SPEED_LIMIT);
             delay_ms(400);
-            fsm.checkpoint = HOANG_XA;
-            
         }
-        else if(RGB_2 == BLUE || RGB_1 == BLUE ){
+        else if((RGB_2 == BLUE) && ((RGB_1 == GREEN))){
             motor_stop();
             delay_ms(1000);
             // uart_sendstr("BLUE2====================== \r\n");
-            turn_right(SPEED_LIMIT);
-            delay_ms(700);
-            turn_right(SPEED_LIMIT);
-            delay_ms(400);
+            fix_left(SPEED_LIMIT);
+            delay_ms(DELAY_HANOI);
+            motor_stop();
+            delay_ms(100);
+           
             fsm.checkpoint = HOANG_XA;
         }
 
@@ -148,10 +125,12 @@ void Quangha_structure(void){
             motor_stop();
             delay_ms(1000);
             // uart_sendstr("GREEN_1====================== \r\n");
-            turn_right(SPEED_LIMIT);
-            delay_ms(700);
-            turn_right(SPEED_LIMIT);
-            delay_ms(400);
+            fix_left(SPEED_LIMIT);
+            delay_ms(DELAY_HANOI);
+            motor_stop();
+            delay_ms(100);
+            // fix_left(SPEED_LIMIT);
+            // delay_ms(DELAY_HANOI);
             fsm.checkpoint = HOANG_XA;
         }
         else if((RGB_2 == GREEN) || ((RGB_1 == GREEN)))
@@ -160,9 +139,11 @@ void Quangha_structure(void){
             delay_ms(1000);
             // uart_sendstr("GREEN_2====================== \r\n");
             turn_right(SPEED_LIMIT);
-            delay_ms(700);
-            turn_right(SPEED_LIMIT);
-            delay_ms(400);
+            delay_ms(DELAY_HANOI);
+            motor_stop();
+            delay_ms(100);
+            // turn_right(SPEED_LIMIT);
+            // delay_ms(DELAY_HANOI);
             fsm.checkpoint = HOANG_XA;
         }
         break;
@@ -177,22 +158,23 @@ void Quangha_structure(void){
                 delay_ms(1000);
             }
             motor_forward(SPEED_LIMIT);
-            delay_ms(300);
+            delay_ms(INNCREE_FORWORD);
         }
         else if (RGB_1 == WHITE)
         {
            
             turn_right(SPEED_LIMIT);
-            delay_ms(600);
+            delay_ms(400);
         }
         else if (RGB_2 == WHITE)
         {
             turn_left(SPEED_LIMIT);
-            delay_ms(600);
+            delay_ms(400);
         }
 
         else if ((RGB_1 == GREEN) && (RGB_2 == GREEN))
         {
+            
             fsm.checkpoint = TRUONG_XA;
         }
 
@@ -200,7 +182,7 @@ void Quangha_structure(void){
         {
             fsm.checkpoint = TRUONG_XA;
         }
-        fixcheck = 0;
+       
         break;
     case TRUONG_XA:
         // uart_sendstr("Truong xa =====================\r\n");
@@ -208,7 +190,7 @@ void Quangha_structure(void){
             motor_stop();
             delay_ms(1000);
             motor_forward(SPEED_LIMIT);
-            delay_ms(300);
+            delay_ms(INNCREE_FORWORD);
         }
         else if (RGB_1 == WHITE)
         {
@@ -223,11 +205,15 @@ void Quangha_structure(void){
 
         else if ((RGB_1 == BLUE) && (RGB_2 == BLUE))
         {
+            fix_left(SPEED_LIMIT);
+            delay_ms(DELAY_CA_MAU);
             fsm.checkpoint = CA_MAU;
         }
 
         else if ((RGB_1 == BLUE) || (RGB_2 == BLUE))
         {
+            fix_left(SPEED_LIMIT);
+            delay_ms(DELAY_CA_MAU);
             fsm.checkpoint = CA_MAU;
         }
         
@@ -238,17 +224,59 @@ void Quangha_structure(void){
             motor_stop();
             delay_ms(1000);
             motor_forward(SPEED_LIMIT);
-            delay_ms(300);
+            delay_ms(INNCREE_FORWORD);
         }
         else if (RGB_1 == WHITE)
         {
             turn_right(SPEED_LIMIT);
-            delay_ms(600);
+            delay_ms(500);
         }
         else if (RGB_2 == WHITE)
         {
             turn_left(SPEED_LIMIT);
-            delay_ms(600);
+            delay_ms(500);
+        }
+
+        else if ((RGB_1 == RED) || (RGB_2 == RED))
+        {
+            fsm.checkpoint == HA_NOI;
+        }
+        else if ((RGB_1 == RED) && (RGB_2 == RED))
+        {
+            fsm.checkpoint == HA_NOI;
+        }
+
+        else if ((RGB_1 == GREEN) || (RGB_2 == GREEN))
+        {
+
+            motor_stop();
+            delay_ms(1000);
+            motor_backward(SPEED_LIMIT);
+            delay_ms(300);
+            motor_stop();
+            delay_ms(1000);
+            turn_right(SPEED_LIMIT);
+            delay_ms(2000);
+            fsm.checkpoint == HA_NOI;
+        }
+        break;
+    case HA_NOI:
+        if((RGB_1 == RED) && (RGB_2 == RED)){
+            // uart_sendstr("Ca Mau =====================\r\n");
+            motor_stop();
+            delay_ms(1000);
+            motor_forward(SPEED_LIMIT);
+            delay_ms(INNCREE_FORWORD);
+        }
+        else if (RGB_1 == WHITE)
+        {
+            turn_right(SPEED_LIMIT);
+            delay_ms(500);
+        }
+        else if (RGB_2 == WHITE)
+        {
+            turn_left(SPEED_LIMIT);
+            delay_ms(500);
         }
         break;
     default:
@@ -268,6 +296,7 @@ void app_run(){
             #endif
 
             Quangha_structure();
+            // fix_left(100);
             // move_control();
             // uart_sendstr("test log \r\n");
             // mpu6050_read_all(&sensor_data);
