@@ -3,10 +3,15 @@
 
 //quangha_structure
 #define   SPEED_LIMIT 40
+#define FIXLEFT_SPEED 45 
 
-#define DELAY_HANOI 1400
-#define DELAY_CA_MAU 700 
-#define INNCREE_FORWORD 250 
+#define DELAY_HANOI 900
+#define DELAY_CA_MAU 400 
+#define INNCREE_FORWORD 1400 
+
+#define DELAY_SPEED 500 
+
+
 
 
 
@@ -19,14 +24,6 @@
 
 
 #define ESDEV_MODE   0
-
-
-
-
-
-
-
-
 
 #ifndef PID_KP
 #define PID_KP              3.5f
