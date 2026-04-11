@@ -7,7 +7,7 @@
 
 
 #define  RGB_ADDR  0x29
-#define  RGB2_ADDR 0x29  // Đổi sang 0x39/0x49/0x59 nếu cần trùng bus với sensor 1 
+#define  RGB2_ADDR 0x29  
 
 
 #define TCS34725_COMMAND        0x80

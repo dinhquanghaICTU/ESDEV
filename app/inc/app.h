@@ -17,14 +17,14 @@
 #define COLOR_BLUE    1
 #define COLOR_GREEN   2
 #define COLOR_RED     3
-#define COLOR_WHITE   4   // không nhận ra màu nào = trắng/nền
+#define COLOR_WHITE   4   
 
 #define SEEK_SPEED    35
 
 typedef enum {
-    STATE_FOLLOW,       // Đang trên xanh → PID giữ thẳng
-    STATE_FIND_LEFT,    // Ra trắng, quét sang trái tìm xanh
-    STATE_FIND_RIGHT,   // Ra trắng, quét sang phải tìm xanh
+    STATE_FOLLOW,       
+    STATE_FIND_LEFT,    
+    STATE_FIND_RIGHT,   
     STATE_STOP
 } LineState_t;
 

@@ -17,10 +17,10 @@ void i2c_init(void) {
     RCC->APB2ENR |= RCC_APB2ENR_AFIOEN | RCC_APB2ENR_IOPBEN;  
     RCC->APB1ENR |= RCC_APB1ENR_I2C1EN;
 
-    // Dùng chân mặc định PB6/PB7 nên tắt remap I2C1
+    
     AFIO->MAPR &= ~AFIO_MAPR_I2C1_REMAP;  
 
-    // Cấu hình PB6, PB7: Alternate Function Open-Drain, 50MHz cho I2C1
+    
     gpio_pin_init(GPIOB, MPU_SCL_PIN, GPIO_MODE_AF_OD_50MHZ);
     gpio_pin_init(GPIOB, MPU_SDA_PIN, GPIO_MODE_AF_OD_50MHZ);
 
@@ -103,26 +103,6 @@ uint8_t i2c_read_nack(void) {
     return I2C1->DR;
 }
 
-// void i2c_bus_recovery(void)
-// {
-//     gpio_pin_init(GPIOB, 6, GPIO_MODE_AF_OD_50MHZ);
-//     gpio_pin_init(GPIOB, 7, GPIO_MODE_AF_OD_50MHZ);
-
-//     for(int i = 0; i < 9; i++)
-//     {
-//         gpio_write_pin(GPIOB, 6, 1);
-//         delay_ms(1);
-//         gpio_write_pin(GPIOB, 6, 0);
-//         delay_ms(1);
-//     }
-
-//     gpio_write_pin(GPIOB, 6, 1);
-//     gpio_write_pin(GPIOB, 7, 1);
-// }
-
-// ============================================================
-// I2C2 - PB10 (SCL), PB11 (SDA)
-// ============================================================
 
 void i2c2_init(void) {
     RCC->APB2ENR |= RCC_APB2ENR_AFIOEN | RCC_APB2ENR_IOPBEN;
