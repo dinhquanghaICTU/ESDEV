@@ -32,9 +32,9 @@ typedef enum {
 void app_init();
 void app_run();
 void fsm_init(void);
-void lungcu_check(void);
-void Quangha_structure(void);
 
+
+void Quangha_structure(void);
 
 
 

@@ -10,7 +10,9 @@
 #include "RGB_senser.h"
 #include "pid.h"
 #include <stdio.h>
+#include <string.h>
 #include "esdev_config.h"
+// #include "app_structure.h"
 
 void app_init(){
     systick_init();  
@@ -27,7 +29,7 @@ void app_init(){
     motor_init();
     rgb_sensor_init();
     rgb2_sensor_init();
-    uart_init(115200); 
+    uart_init(115200);
     
      #if(PID_MODE || TEST_COLOR_SENSOR)
         uart_sendstr("Calibrating gyro...\r\n");
@@ -45,10 +47,10 @@ void app_run(){
     char buffer[128];
         while (1)
         {
-            
-            // Quangha_structure();
-            motor_forward(100);
-            delay_ms(10000);
+           
+            Quangha_structure();
+            // motor_forward(100);
+            // delay_ms(10000);
             // fix_left(100);
             // move_control();
             // uart_sendstr("test log \r\n");

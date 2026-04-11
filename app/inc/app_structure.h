@@ -41,11 +41,6 @@ typedef struct
     // sendcmt cmt;
 }My_fsm;
 
-
-
-
-
-
-
+void Quangha_structure(void);
 
 #endif // __APP_STRUCTURE_H__

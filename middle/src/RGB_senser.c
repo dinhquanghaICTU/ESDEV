@@ -88,32 +88,27 @@
     float threshold = 0.08f;
 
 
-    if (rn > 0.30f && gn > 0.30f && bn < 0.10f) {
-        // uart_sendstr("YELLOW\r\n");
-        return 0;
+    if (rn > (1.0f/3 - 0.08f) && rn < (1.0f/3 + 0.08f) &&
+        gn > (1.0f/3 - 0.08f) && gn < (1.0f/3 + 0.08f) &&
+        bn > (1.0f/3 - 0.08f) && bn < (1.0f/3 + 0.08f)) {
+        return 4;   // WHITE
     }
-    else if (rn > (1.0f/3 - threshold) && rn < (1.0f/3 + threshold) &&
-        gn > (1.0f/3 - threshold) && gn < (1.0f/3 + threshold) &&
-        bn > (1.0f/3 - threshold) && bn < (1.0f/3 + threshold)) {
-        // uart_sendstr("WHITE\r\n");
-        return 4;
-    }
+    // else if (gn > 0.40f && rn > 0.28f && bn < rn) {
+    //     return 0;   // YELLOW ← khớp data thực của bạn
+    // }
     else if (bn > rn && bn > gn) {
-        // uart_sendstr("BLUE\r\n");
-        return 1;
+        return 1;   // BLUE
     }
     else if (gn > rn && gn > bn) {
-        // uart_sendstr("GREEN\r\n");
-        return 2;
+        return 2;   // GREEN
     }
     else if (rn > gn && rn > bn) {
-        // uart_sendstr("RED\r\n");
-        return 3;
+        return 3;   // RED
     }
     else {
-        // uart_sendstr("WHITE\r\n");
-        return 4;
+        return 4;   // WHITE fallback
     }
+
    
 }
 
