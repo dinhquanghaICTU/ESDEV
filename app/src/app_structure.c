@@ -21,18 +21,18 @@ void Quangha_structure(void){
 
     RGB_1 = rgb_read_color(); // RGB_left 
     RGB_2 = rgb2_read_color();// RGB_right
-    char str[100];
-    sprintf(str,"%d,  %d\r\n",RGB_1,RGB_2);
-    uart_sendstr(str);
+    // char str[100];
+    // sprintf(str,"%d,  %d\r\n",RGB_1,RGB_2);
+    // uart_sendstr(str);
     
     switch (fsm.checkpoint)
     {
     case LUNG_CU:
         if((RGB_1 == RED) && (RGB_2 == RED)){
-            if(send_uart){
-                uart_sendstr("ESDEV09:FW-LUNGCU\r\n");
-                send_uart = 0;
-            }
+            
+            uart_sendstr("ESDEV09:FW-LUNGCU\r\n");
+            
+            
             
             motor_stop();
             delay_ms(INNCREE_FORWORD);
@@ -64,7 +64,7 @@ void Quangha_structure(void){
             delay_ms(100);
 
             uart_sendstr("ESDEV09:CK-LUNGCU\r\n");
-            send_uart = 1;
+            
             fsm.checkpoint = HOANG_XA;
         }
         else if((RGB_2 == BLUE) && ((RGB_1 == BLUE))){
@@ -75,7 +75,7 @@ void Quangha_structure(void){
             motor_stop();
             delay_ms(100);
             uart_sendstr("ESDEV09:CK-LUNGCU\r\n");
-            send_uart = 1;
+            
             fsm.checkpoint = HOANG_XA;
         }
 
@@ -90,7 +90,7 @@ void Quangha_structure(void){
             // fix_left(FIXLEFT_SPEED);
             // delay_ms(DELAY_HANOI);
             uart_sendstr("ESDEV09:CK-LUNGCU\r\n");
-            send_uart = 1;
+            
             fsm.checkpoint = HOANG_XA;
         }
         else if((RGB_2 == GREEN) || ((RGB_1 == GREEN)))
@@ -105,17 +105,17 @@ void Quangha_structure(void){
             // turn_right(SPEED_LIMIT);
             // delay_ms(DELAY_HANOI);
             uart_sendstr("ESDEV09:CK-LUNGCU\r\n");
-            send_uart = 1;
+            
             fsm.checkpoint = HOANG_XA;
         }
         break;
 
     case HOANG_XA:
         if((RGB_1 == BLUE) && (RGB_2 == BLUE)){
-            if (send_uart){
-                uart_sendstr("ESDEV09:FW-HOANGSA\r\n");
-                send_uart = 0;
-            }
+            
+            uart_sendstr("ESDEV09:FW-HOANGSA\r\n");
+                
+            
             if(fixcheck == 1){
                 // motor_forward(SPEED_LIMIT);
                 // delay_ms(LAC);
@@ -144,7 +144,7 @@ void Quangha_structure(void){
             motor_forward(SPEED_LIMIT);
             delay_ms(100);
             uart_sendstr("ESDEV09:CK-HOANGSA\r\n");
-            send_uart = 1; 
+             
             fsm.checkpoint = TRUONG_XA;
         }
 
@@ -155,7 +155,7 @@ void Quangha_structure(void){
             motor_forward(SPEED_LIMIT);
             delay_ms(100);
             uart_sendstr("ESDEV09:CK-HOANGSA\r\n");
-            send_uart = 1;
+            
             fsm.checkpoint = TRUONG_XA;
         }
         else if ((RGB_1 == BLUE) && (RGB_2 == RED))
@@ -168,11 +168,10 @@ void Quangha_structure(void){
         break;
     case TRUONG_XA:
         if((RGB_1 == GREEN) && (RGB_2 == GREEN)){
-            if (send_uart)
-            {
-                uart_sendstr("ESDEV09:FW-TRUONGSA\r\n");
-                send_uart = 0;
-            }
+            
+            
+            uart_sendstr("ESDEV09:FW-TRUONGSA\r\n");
+                
             
             
             motor_stop();
@@ -216,7 +215,7 @@ void Quangha_structure(void){
             motor_forward(SPEED_LIMIT);
             delay_ms(200);
             uart_sendstr("ESDEV09:CK-TRUONGSA\r\n");
-            send_uart = 1;
+           
             fsm.checkpoint = CA_MAU;
         }
         else if ((RGB_1 == BLUE) && (RGB_2 == RED))
@@ -231,6 +230,10 @@ void Quangha_structure(void){
             
             motor_stop();
             delay_ms(LAC);
+            motor_forward(SPEED_LIMIT);
+            delay_ms(200);
+            motor_stop();
+            delay_ms(LAC);
             fix_left(SPEED_LIMIT);
             delay_ms(400);
             motor_stop();
@@ -238,7 +241,7 @@ void Quangha_structure(void){
             // fix_left(FIXLEFT_SPEED);
             // delay_ms(350);
             uart_sendstr("ESDEV09:CK-TRUONGSA\r\n");
-            send_uart =1;
+            
             fsm.checkpoint = CA_MAU;
         }
 
@@ -248,23 +251,22 @@ void Quangha_structure(void){
             motor_stop();
             delay_ms(400);
             motor_forward(SPEED_LIMIT);
-            delay_ms(200);
+            delay_ms(100);
             motor_stop();
             delay_ms(LAC);
             fix_left(FIXLEFT_SPEED);
             delay_ms(350);
             uart_sendstr("ESDEV09:CK-TRUONGSA\r\n");
-            send_uart =1;
+            
             fsm.checkpoint = CA_MAU;
         }
         
         break;
     case CA_MAU:
         if((RGB_1 == BLUE) && (RGB_2 == BLUE)){
-            if(send_uart){
-                uart_sendstr("ESDEV09:FW-CAMAU\r\n");
-                send_uart=0;
-            }
+            
+            uart_sendstr("ESDEV09:FW-CAMAU\r\n");
+                
             
             motor_stop();
             delay_ms(INNCREE_FORWORD);
@@ -278,6 +280,7 @@ void Quangha_structure(void){
         }
         else if (RGB_2 == WHITE)
         {
+            uart_sendstr("ESDEV09:CK-CAMAU\r\n");
             turn_left(SPEED_LIMIT);
             delay_ms(LAC_Camau);
         }
@@ -305,7 +308,7 @@ void Quangha_structure(void){
             fix_left(FIXLEFT_SPEED);
             delay_ms(400);
             uart_sendstr("ESDEV09:CK-CAMAU\r\n");
-            send_uart =1;
+            
             fsm.checkpoint = HA_NOI;
         }
         else if ((RGB_1 == RED) && (RGB_2 == RED))
@@ -322,7 +325,7 @@ void Quangha_structure(void){
             delay_ms(650);
             // 
             uart_sendstr("ESDEV09:CK-CAMAU\r\n");
-            send_uart =1;
+            
             fsm.checkpoint = HA_NOI;
         }
         else if ((RGB_1 == RED)&&(RGB_2 == BLUE))
@@ -338,23 +341,29 @@ void Quangha_structure(void){
 
             motor_stop();
             delay_ms(1000);
+            motor_forward(SPEED_LIMIT);
+            delay_ms(100);
+            motor_stop();
+            delay_ms(1000);
             motor_backward(SPEED_LIMIT);
             delay_ms(250);
+            motor_backward(SPEED_LIMIT);
+            delay_ms(150);
             motor_stop();
             delay_ms(INNCREE_FORWORD);
             turn_right(SPEED_LIMIT);
             delay_ms(1200);
+
             uart_sendstr("ESDEV09:CK-CAMAU\r\n");
-            send_uart =1;
+            
             fsm.checkpoint = HA_NOI;
         }
         break;
     case HA_NOI:
         if((RGB_1 == RED) && (RGB_2 == RED)){
-            if(send_uart){
-                uart_sendstr("ESDEV09:FW-HANOI\r\n");
-                send_uart = 0;
-            }
+            
+            uart_sendstr("ESDEV09:FW-HANOI\r\n");
+                
             
             motor_stop();
             delay_ms(INNCREE_FORWORD);
@@ -368,14 +377,15 @@ void Quangha_structure(void){
         }
         else if (RGB_2 == WHITE)
         {
+            uart_sendstr("ESDEV09:KT-HANOI\r\n");
             turn_left(SPEED_LIMIT);
             delay_ms(400);
         }
 
         else if ((RGB_1 == 0))
         {
-            uart_sendstr("ESDEV09:KT-HANOI\r\n");
-            send_uart = 1;
+           
+            
             motor_stop();
             delay_ms(100000);
         }

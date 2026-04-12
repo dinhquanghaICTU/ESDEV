@@ -1,0 +1,864 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
+                              build/obj/pid.o (__aeabi_fmul)
+C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+                              build/obj/RGB_senser.o (__aeabi_fsub)
+C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivsf3.o)
+                              build/obj/RGB_senser.o (__aeabi_fdiv)
+C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+                              build/obj/RGB_senser.o (__aeabi_fcmpeq)
+
+Discarded input sections
+
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/main.o
+ .group         0x00000000        0xc build/obj/startup_stm32f103c8.o
+ .group         0x00000000        0xc build/obj/startup_stm32f103c8.o
+ .debug_macro   0x00000000      0xad8 build/obj/startup_stm32f103c8.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .group         0x00000000        0xc build/obj/app.o
+ .debug_macro   0x00000000      0xad8 build/obj/app.o
+ .debug_macro   0x00000000       0x94 build/obj/app.o
+ .debug_macro   0x00000000       0x22 build/obj/app.o
+ .debug_macro   0x00000000      0x523 build/obj/app.o
+ .debug_macro   0x00000000       0x22 build/obj/app.o
+ .debug_macro   0x00000000       0x75 build/obj/app.o
+ .debug_macro   0x00000000       0x24 build/obj/app.o
+ .debug_macro   0x00000000       0x94 build/obj/app.o
+ .debug_macro   0x00000000       0x3c build/obj/app.o
+ .debug_macro   0x00000000       0x34 build/obj/app.o
+ .debug_macro   0x00000000       0x16 build/obj/app.o
+ .debug_macro   0x00000000       0x57 build/obj/app.o
+ .debug_macro   0x00000000       0x9e build/obj/app.o
+ .debug_macro   0x00000000      0x364 build/obj/app.o
+ .debug_macro   0x00000000      0x127 build/obj/app.o
+ .debug_macro   0x00000000       0x10 build/obj/app.o
+ .debug_macro   0x00000000       0x16 build/obj/app.o
+ .debug_macro   0x00000000       0x4a build/obj/app.o
+ .debug_macro   0x00000000       0x34 build/obj/app.o
+ .debug_macro   0x00000000       0x10 build/obj/app.o
+ .debug_macro   0x00000000       0x58 build/obj/app.o
+ .debug_macro   0x00000000      0x1e5 build/obj/app.o
+ .debug_macro   0x00000000       0x16 build/obj/app.o
+ .debug_macro   0x00000000       0x16 build/obj/app.o
+ .debug_macro   0x00000000      0x170 build/obj/app.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/app_structure.o
+ .debug_macro   0x00000000      0xad8 build/obj/app_structure.o
+ .debug_macro   0x00000000      0x523 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x94 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x22 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x75 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x24 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x94 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x3c build/obj/app_structure.o
+ .debug_macro   0x00000000       0x34 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x16 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x57 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x9e build/obj/app_structure.o
+ .debug_macro   0x00000000      0x364 build/obj/app_structure.o
+ .debug_macro   0x00000000      0x127 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x10 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x16 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x4a build/obj/app_structure.o
+ .debug_macro   0x00000000       0x34 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x10 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x58 build/obj/app_structure.o
+ .debug_macro   0x00000000      0x1e5 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x16 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x16 build/obj/app_structure.o
+ .debug_macro   0x00000000      0x170 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x46 build/obj/app_structure.o
+ .debug_macro   0x00000000       0x70 build/obj/app_structure.o
+ .group         0x00000000        0xc build/obj/gpio.o
+ .group         0x00000000        0xc build/obj/gpio.o
+ .group         0x00000000        0xc build/obj/gpio.o
+ .group         0x00000000        0xc build/obj/gpio.o
+ .group         0x00000000        0xc build/obj/gpio.o
+ .debug_macro   0x00000000      0xad8 build/obj/gpio.o
+ .debug_macro   0x00000000      0x523 build/obj/gpio.o
+ .debug_macro   0x00000000       0x70 build/obj/gpio.o
+ .group         0x00000000        0xc build/obj/i2c.o
+ .group         0x00000000        0xc build/obj/i2c.o
+ .group         0x00000000        0xc build/obj/i2c.o
+ .group         0x00000000        0xc build/obj/i2c.o
+ .group         0x00000000        0xc build/obj/i2c.o
+ .debug_macro   0x00000000      0xad8 build/obj/i2c.o
+ .debug_macro   0x00000000      0x523 build/obj/i2c.o
+ .debug_macro   0x00000000       0x28 build/obj/i2c.o
+ .group         0x00000000        0xc build/obj/pwm.o
+ .group         0x00000000        0xc build/obj/pwm.o
+ .group         0x00000000        0xc build/obj/pwm.o
+ .debug_macro   0x00000000      0xad8 build/obj/pwm.o
+ .debug_macro   0x00000000      0x523 build/obj/pwm.o
+ .group         0x00000000        0xc build/obj/systick.o
+ .group         0x00000000        0xc build/obj/systick.o
+ .debug_macro   0x00000000      0xad8 build/obj/systick.o
+ .debug_macro   0x00000000      0x523 build/obj/systick.o
+ .group         0x00000000        0xc build/obj/uart.o
+ .group         0x00000000        0xc build/obj/uart.o
+ .group         0x00000000        0xc build/obj/uart.o
+ .group         0x00000000        0xc build/obj/uart.o
+ .debug_macro   0x00000000      0xad8 build/obj/uart.o
+ .debug_macro   0x00000000      0x523 build/obj/uart.o
+ .group         0x00000000        0xc build/obj/MPU.o
+ .group         0x00000000        0xc build/obj/MPU.o
+ .group         0x00000000        0xc build/obj/MPU.o
+ .group         0x00000000        0xc build/obj/MPU.o
+ .group         0x00000000        0xc build/obj/MPU.o
+ .debug_macro   0x00000000      0xad8 build/obj/MPU.o
+ .debug_macro   0x00000000      0x523 build/obj/MPU.o
+ .debug_macro   0x00000000       0x88 build/obj/MPU.o
+ .debug_macro   0x00000000       0x70 build/obj/MPU.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/RGB_senser.o
+ .debug_macro   0x00000000      0xad8 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x22 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x75 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x24 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x94 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x3c build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x34 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x16 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x57 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x9e build/obj/RGB_senser.o
+ .debug_macro   0x00000000      0x364 build/obj/RGB_senser.o
+ .debug_macro   0x00000000      0x127 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x10 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x16 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x4a build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x34 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x10 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x58 build/obj/RGB_senser.o
+ .debug_macro   0x00000000      0x1e5 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x16 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x16 build/obj/RGB_senser.o
+ .debug_macro   0x00000000      0x170 build/obj/RGB_senser.o
+ .debug_macro   0x00000000      0x523 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x46 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x88 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x82 build/obj/RGB_senser.o
+ .debug_macro   0x00000000       0x70 build/obj/RGB_senser.o
+ .group         0x00000000        0xc build/obj/led.o
+ .group         0x00000000        0xc build/obj/led.o
+ .group         0x00000000        0xc build/obj/led.o
+ .debug_macro   0x00000000      0xad8 build/obj/led.o
+ .debug_macro   0x00000000      0x523 build/obj/led.o
+ .debug_macro   0x00000000       0x7c build/obj/led.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .group         0x00000000        0xc build/obj/motor.o
+ .debug_macro   0x00000000      0xad8 build/obj/motor.o
+ .debug_macro   0x00000000      0x523 build/obj/motor.o
+ .debug_macro   0x00000000       0x7c build/obj/motor.o
+ .debug_macro   0x00000000       0x52 build/obj/motor.o
+ .debug_macro   0x00000000       0x70 build/obj/motor.o
+ .debug_macro   0x00000000       0x22 build/obj/motor.o
+ .debug_macro   0x00000000       0x75 build/obj/motor.o
+ .debug_macro   0x00000000       0x24 build/obj/motor.o
+ .debug_macro   0x00000000       0x94 build/obj/motor.o
+ .debug_macro   0x00000000       0x3c build/obj/motor.o
+ .debug_macro   0x00000000       0x34 build/obj/motor.o
+ .debug_macro   0x00000000       0x16 build/obj/motor.o
+ .debug_macro   0x00000000       0x57 build/obj/motor.o
+ .debug_macro   0x00000000       0x9e build/obj/motor.o
+ .debug_macro   0x00000000      0x364 build/obj/motor.o
+ .debug_macro   0x00000000      0x127 build/obj/motor.o
+ .debug_macro   0x00000000       0x10 build/obj/motor.o
+ .debug_macro   0x00000000       0x16 build/obj/motor.o
+ .debug_macro   0x00000000       0x4a build/obj/motor.o
+ .debug_macro   0x00000000       0x34 build/obj/motor.o
+ .debug_macro   0x00000000       0x10 build/obj/motor.o
+ .debug_macro   0x00000000       0x58 build/obj/motor.o
+ .debug_macro   0x00000000      0x1e5 build/obj/motor.o
+ .debug_macro   0x00000000       0x16 build/obj/motor.o
+ .debug_macro   0x00000000       0x16 build/obj/motor.o
+ .debug_macro   0x00000000      0x170 build/obj/motor.o
+ .debug_macro   0x00000000       0x46 build/obj/motor.o
+ .group         0x00000000        0xc build/obj/ringbuff.o
+ .group         0x00000000        0xc build/obj/ringbuff.o
+ .debug_macro   0x00000000      0xad8 build/obj/ringbuff.o
+ .debug_macro   0x00000000      0x523 build/obj/ringbuff.o
+ .group         0x00000000        0xc build/obj/pid.o
+ .group         0x00000000        0xc build/obj/pid.o
+ .group         0x00000000        0xc build/obj/pid.o
+ .debug_macro   0x00000000      0xad8 build/obj/pid.o
+ .debug_macro   0x00000000      0x523 build/obj/pid.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00010000         xr
+SRAM             0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD build/obj/main.o
+LOAD build/obj/startup_stm32f103c8.o
+LOAD build/obj/app.o
+LOAD build/obj/app_structure.o
+LOAD build/obj/gpio.o
+LOAD build/obj/i2c.o
+LOAD build/obj/pwm.o
+LOAD build/obj/systick.o
+LOAD build/obj/uart.o
+LOAD build/obj/MPU.o
+LOAD build/obj/RGB_senser.o
+LOAD build/obj/led.o
+LOAD build/obj/motor.o
+LOAD build/obj/ringbuff.o
+LOAD build/obj/pid.o
+LOAD C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc.a
+LOAD C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
+LOAD C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a
+START GROUP
+LOAD C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a
+LOAD C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a
+LOAD C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc.a
+END GROUP
+
+.isr_vector     0x08000000       0xec
+ *(.isr_vector)
+ .isr_vector    0x08000000       0xec build/obj/startup_stm32f103c8.o
+                0x08000000                vector_table
+
+.text           0x080000ec     0x27bb
+ *(.text*)
+ .text          0x080000ec       0x12 build/obj/main.o
+                0x080000ec                main
+ *fill*         0x080000fe        0x2 
+ .text          0x08000100       0x64 build/obj/startup_stm32f103c8.o
+                0x08000100                Reset_Handler
+                0x0800015c                Default_Handler
+                0x0800015c                USART2_IRQHandler
+                0x0800015c                USART3_IRQHandler
+ .text          0x08000164       0x60 build/obj/app.o
+                0x08000164                app_init
+                0x08000194                app_run
+ .text          0x080001c4      0x768 build/obj/app_structure.o
+                0x080001c4                fsm_init
+                0x080001e4                Quangha_structure
+ .text          0x0800092c      0x12c build/obj/gpio.o
+                0x0800092c                gpio_pin_init
+                0x080009f8                gpio_write_pin
+                0x08000a2e                gpio_toggle_pin
+ .text          0x08000a58      0x4e8 build/obj/i2c.o
+                0x08000a58                i2c_init
+                0x08000aec                i2c_start
+                0x08000b48                i2c_stop
+                0x08000b64                i2c_send_address
+                0x08000bd0                i2c_write
+                0x08000c34                i2c_read_ack
+                0x08000c84                i2c_read_nack
+                0x08000cd4                i2c2_init
+                0x08000d58                i2c2_start
+                0x08000db4                i2c2_stop
+                0x08000dd0                i2c2_send_address
+                0x08000e3c                i2c2_write
+                0x08000ea0                i2c2_read_ack
+                0x08000ef0                i2c2_read_nack
+ .text          0x08000f40       0xe8 build/obj/pwm.o
+                0x08000f40                pwm_init
+                0x08000fd4                pwm_set_duty
+ .text          0x08001028       0x9c build/obj/systick.o
+                0x08001028                systick_init
+                0x08001064                SysTick_Handler
+                0x08001080                delay_ms
+                0x080010b0                get_tick_ms
+ .text          0x080010c4      0x1b0 build/obj/uart.o
+                0x080010c4                uart_init
+                0x0800114c                uart_sendchar
+                0x0800117c                uart_getchar
+                0x0800119c                uart_sendstr
+                0x080011c6                uart_send_array
+                0x080011fc                uart_available
+                0x08001210                uart_rx_count
+                0x08001224                USART1_IRQHandler
+ .text          0x08001274      0x1b0 build/obj/MPU.o
+                0x08001274                mpu6050_init
+                0x080012aa                mpu6050_write_byte
+                0x080012e2                mpu6050_read_byte
+                0x0800131e                mpu6050_read_all
+                0x08001406                mpu6050_read_gz
+ .text          0x08001424      0x61c build/obj/RGB_senser.o
+                0x08001424                rgb_sensor_init
+                0x08001484                rgb_write_byte
+                0x080014c2                rgb_read_byte
+                0x08001508                rgb_read_16
+                0x08001562                rgb_read_color
+                0x080016fc                rgb2_sensor_init
+                0x0800175c                rgb2_write_byte
+                0x0800179a                rgb2_read_byte
+                0x080017e0                rgb2_read_16
+                0x0800183a                rgb2_read_color
+ .text          0x08001a40       0x64 build/obj/led.o
+                0x08001a40                led_init
+                0x08001a58                led_on
+                0x08001a70                led_off
+                0x08001a88                led_toggle
+ .text          0x08001aa4      0x244 build/obj/motor.o
+                0x08001aa4                motor_init
+                0x08001adc                motor_forward
+                0x08001b30                fix_left
+                0x08001b84                motor_backward
+                0x08001bd8                turn_left
+                0x08001c28                turn_right
+                0x08001c78                motor_stop
+                0x08001c90                motor_forward_pid
+ .text          0x08001ce8      0x122 build/obj/ringbuff.o
+                0x08001ce8                ring_buffer_init
+                0x08001d0a                ring_buffer_write
+                0x08001d54                ring_buffer_read
+                0x08001da0                ring_buffer_available
+                0x08001dc8                ring_buffer_count
+ *fill*         0x08001e0a        0x2 
+ .text          0x08001e0c      0x2b4 build/obj/pid.o
+                0x08001e0c                pid_init
+                0x08001e5a                pid_reset
+                0x08001e7c                pid_compute
+                0x08001fba                heading_init
+                0x08001fdc                heading_calibrate
+                0x08002044                heading_update
+                0x080020a4                heading_reset
+ .text          0x080020c0      0x168 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
+ .text          0x08002228      0x21c C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+                0x08002228                __aeabi_frsub
+                0x08002230                __subsf3
+                0x08002230                __aeabi_fsub
+                0x08002234                __aeabi_fadd
+                0x08002234                __addsf3
+                0x08002394                __aeabi_ui2f
+                0x08002394                __floatunsisf
+                0x0800239c                __aeabi_i2f
+                0x0800239c                __floatsisf
+                0x080023b8                __aeabi_ul2f
+                0x080023b8                __floatundisf
+                0x080023c8                __aeabi_l2f
+                0x080023c8                __floatdisf
+ .text          0x08002444      0x2a0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivsf3.o)
+                0x08002444                __mulsf3
+                0x08002444                __aeabi_fmul
+                0x080025ac                __aeabi_fdiv
+                0x080025ac                __divsf3
+ .text          0x080026e4       0xec C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+                0x080026e4                __gesf2
+                0x080026e4                __gtsf2
+                0x080026ec                __lesf2
+                0x080026ec                __ltsf2
+                0x080026f4                __nesf2
+                0x080026f4                __eqsf2
+                0x080026f4                __cmpsf2
+                0x08002754                __aeabi_cfrcmple
+                0x0800275c                __aeabi_cfcmpeq
+                0x0800275c                __aeabi_cfcmple
+                0x0800276c                __aeabi_fcmpeq
+                0x08002780                __aeabi_fcmplt
+                0x08002794                __aeabi_fcmple
+                0x080027a8                __aeabi_fcmpge
+                0x080027bc                __aeabi_fcmpgt
+ *(.rodata*)
+ .rodata        0x080027d0       0xd7 build/obj/app_structure.o
+                0x080028a7                        _etext = .
+
+.glue_7         0x080028a8        0x0
+ .glue_7        0x080028a8        0x0 linker stubs
+
+.glue_7t        0x080028a8        0x0
+ .glue_7t       0x080028a8        0x0 linker stubs
+
+.vfp11_veneer   0x080028a8        0x0
+ .vfp11_veneer  0x080028a8        0x0 linker stubs
+
+.v4_bx          0x080028a8        0x0
+ .v4_bx         0x080028a8        0x0 linker stubs
+
+.iplt           0x080028a8        0x0
+ .iplt          0x080028a8        0x0 build/obj/main.o
+
+.rel.dyn        0x080028a8        0x0
+ .rel.iplt      0x080028a8        0x0 build/obj/main.o
+
+.data           0x20000000        0x4 load address 0x080028a7
+                0x20000000                        _sdata = .
+ *(.data*)
+ .data          0x20000000        0x0 build/obj/main.o
+ .data          0x20000000        0x0 build/obj/startup_stm32f103c8.o
+ .data          0x20000000        0x0 build/obj/app.o
+ .data          0x20000000        0x4 build/obj/app_structure.o
+                0x20000000                fixcheck
+                0x20000002                send_uart
+ .data          0x20000004        0x0 build/obj/gpio.o
+ .data          0x20000004        0x0 build/obj/i2c.o
+ .data          0x20000004        0x0 build/obj/pwm.o
+ .data          0x20000004        0x0 build/obj/systick.o
+ .data          0x20000004        0x0 build/obj/uart.o
+ .data          0x20000004        0x0 build/obj/MPU.o
+ .data          0x20000004        0x0 build/obj/RGB_senser.o
+ .data          0x20000004        0x0 build/obj/led.o
+ .data          0x20000004        0x0 build/obj/motor.o
+ .data          0x20000004        0x0 build/obj/ringbuff.o
+ .data          0x20000004        0x0 build/obj/pid.o
+ .data          0x20000004        0x0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
+ .data          0x20000004        0x0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .data          0x20000004        0x0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivsf3.o)
+ .data          0x20000004        0x0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+                0x20000004                        _edata = .
+
+.igot.plt       0x20000004        0x0 load address 0x080028ac
+ .igot.plt      0x20000004        0x0 build/obj/main.o
+
+.bss            0x20000004       0xa4 load address 0x080028ac
+                0x20000004                        _sbss = .
+ *(.bss*)
+ .bss           0x20000004        0x0 build/obj/main.o
+ .bss           0x20000004        0x0 build/obj/startup_stm32f103c8.o
+ .bss           0x20000004        0x0 build/obj/app.o
+ .bss           0x20000004        0x6 build/obj/app_structure.o
+                0x20000004                RGB_1
+                0x20000006                RGB_2
+ .bss           0x2000000a        0x0 build/obj/gpio.o
+ .bss           0x2000000a        0x0 build/obj/i2c.o
+ .bss           0x2000000a        0x0 build/obj/pwm.o
+ *fill*         0x2000000a        0x2 
+ .bss           0x2000000c        0x4 build/obj/systick.o
+ .bss           0x20000010       0x88 build/obj/uart.o
+ .bss           0x20000098        0x0 build/obj/MPU.o
+ .bss           0x20000098       0x10 build/obj/RGB_senser.o
+                0x20000098                clear
+                0x2000009a                red
+                0x2000009c                green
+                0x2000009e                blue
+                0x200000a0                clear2
+                0x200000a2                red2
+                0x200000a4                green2
+                0x200000a6                blue2
+ .bss           0x200000a8        0x0 build/obj/led.o
+ .bss           0x200000a8        0x0 build/obj/motor.o
+ .bss           0x200000a8        0x0 build/obj/ringbuff.o
+ .bss           0x200000a8        0x0 build/obj/pid.o
+ .bss           0x200000a8        0x0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
+ .bss           0x200000a8        0x0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .bss           0x200000a8        0x0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivsf3.o)
+ .bss           0x200000a8        0x0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+ *(COMMON)
+                0x200000a8                        _ebss = .
+
+._user_heap_stack
+                0x200000a8      0x400 load address 0x08002950
+                0x200000a8                        . = ALIGN (0x8)
+                0x200000a8                        _end = .
+                [!provide]                        PROVIDE (end = .)
+                0x200004a8                        . = (. + 0x400)
+ *fill*         0x200000a8      0x400 
+                0x200004a8                        . = ALIGN (0x8)
+                0x20005000                        _estack = (ORIGIN (SRAM) + LENGTH (SRAM))
+OUTPUT(build/ESDEV.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000     0x21bb
+ .debug_info    0x00000000       0xa6 build/obj/main.o
+ .debug_info    0x000000a6      0x13a build/obj/startup_stm32f103c8.o
+ .debug_info    0x000001e0      0x1fb build/obj/app.o
+ .debug_info    0x000003db      0x27c build/obj/app_structure.o
+ .debug_info    0x00000657      0x239 build/obj/gpio.o
+ .debug_info    0x00000890      0x499 build/obj/i2c.o
+ .debug_info    0x00000d29       0xde build/obj/pwm.o
+ .debug_info    0x00000e07      0x101 build/obj/systick.o
+ .debug_info    0x00000f08      0x2d7 build/obj/uart.o
+ .debug_info    0x000011df      0x25c build/obj/MPU.o
+ .debug_info    0x0000143b      0x4af build/obj/RGB_senser.o
+ .debug_info    0x000018ea      0x15a build/obj/led.o
+ .debug_info    0x00001a44      0x256 build/obj/motor.o
+ .debug_info    0x00001c9a      0x1db build/obj/ringbuff.o
+ .debug_info    0x00001e75      0x346 build/obj/pid.o
+
+.debug_abbrev   0x00000000     0x1044
+ .debug_abbrev  0x00000000       0x62 build/obj/main.o
+ .debug_abbrev  0x00000062       0xef build/obj/startup_stm32f103c8.o
+ .debug_abbrev  0x00000151      0x127 build/obj/app.o
+ .debug_abbrev  0x00000278      0x155 build/obj/app_structure.o
+ .debug_abbrev  0x000003cd       0xe0 build/obj/gpio.o
+ .debug_abbrev  0x000004ad      0x185 build/obj/i2c.o
+ .debug_abbrev  0x00000632       0x9a build/obj/pwm.o
+ .debug_abbrev  0x000006cc       0xbc build/obj/systick.o
+ .debug_abbrev  0x00000788      0x1a5 build/obj/uart.o
+ .debug_abbrev  0x0000092d      0x16e build/obj/MPU.o
+ .debug_abbrev  0x00000a9b      0x192 build/obj/RGB_senser.o
+ .debug_abbrev  0x00000c2d       0xd6 build/obj/led.o
+ .debug_abbrev  0x00000d03       0xed build/obj/motor.o
+ .debug_abbrev  0x00000df0       0xdf build/obj/ringbuff.o
+ .debug_abbrev  0x00000ecf      0x175 build/obj/pid.o
+
+.debug_aranges  0x00000000      0x1e0
+ .debug_aranges
+                0x00000000       0x20 build/obj/main.o
+ .debug_aranges
+                0x00000020       0x20 build/obj/startup_stm32f103c8.o
+ .debug_aranges
+                0x00000040       0x20 build/obj/app.o
+ .debug_aranges
+                0x00000060       0x20 build/obj/app_structure.o
+ .debug_aranges
+                0x00000080       0x20 build/obj/gpio.o
+ .debug_aranges
+                0x000000a0       0x20 build/obj/i2c.o
+ .debug_aranges
+                0x000000c0       0x20 build/obj/pwm.o
+ .debug_aranges
+                0x000000e0       0x20 build/obj/systick.o
+ .debug_aranges
+                0x00000100       0x20 build/obj/uart.o
+ .debug_aranges
+                0x00000120       0x20 build/obj/MPU.o
+ .debug_aranges
+                0x00000140       0x20 build/obj/RGB_senser.o
+ .debug_aranges
+                0x00000160       0x20 build/obj/led.o
+ .debug_aranges
+                0x00000180       0x20 build/obj/motor.o
+ .debug_aranges
+                0x000001a0       0x20 build/obj/ringbuff.o
+ .debug_aranges
+                0x000001c0       0x20 build/obj/pid.o
+
+.debug_macro    0x00000000     0x2b22
+ .debug_macro   0x00000000      0x11c build/obj/main.o
+ .debug_macro   0x0000011c      0xad8 build/obj/main.o
+ .debug_macro   0x00000bf4       0x94 build/obj/main.o
+ .debug_macro   0x00000c88       0x22 build/obj/main.o
+ .debug_macro   0x00000caa       0x22 build/obj/main.o
+ .debug_macro   0x00000ccc       0x75 build/obj/main.o
+ .debug_macro   0x00000d41       0x24 build/obj/main.o
+ .debug_macro   0x00000d65       0x94 build/obj/main.o
+ .debug_macro   0x00000df9       0x3c build/obj/main.o
+ .debug_macro   0x00000e35       0x34 build/obj/main.o
+ .debug_macro   0x00000e69       0x16 build/obj/main.o
+ .debug_macro   0x00000e7f       0x57 build/obj/main.o
+ .debug_macro   0x00000ed6       0x9e build/obj/main.o
+ .debug_macro   0x00000f74      0x364 build/obj/main.o
+ .debug_macro   0x000012d8      0x127 build/obj/main.o
+ .debug_macro   0x000013ff       0x10 build/obj/main.o
+ .debug_macro   0x0000140f       0x16 build/obj/main.o
+ .debug_macro   0x00001425       0x4a build/obj/main.o
+ .debug_macro   0x0000146f       0x34 build/obj/main.o
+ .debug_macro   0x000014a3       0x10 build/obj/main.o
+ .debug_macro   0x000014b3       0x58 build/obj/main.o
+ .debug_macro   0x0000150b      0x1e5 build/obj/main.o
+ .debug_macro   0x000016f0       0x16 build/obj/main.o
+ .debug_macro   0x00001706       0x16 build/obj/main.o
+ .debug_macro   0x0000171c      0x170 build/obj/main.o
+ .debug_macro   0x0000188c       0x2a build/obj/startup_stm32f103c8.o
+ .debug_macro   0x000018b6      0x523 build/obj/startup_stm32f103c8.o
+ .debug_macro   0x00001dd9      0x1b1 build/obj/app.o
+ .debug_macro   0x00001f8a       0x70 build/obj/app.o
+ .debug_macro   0x00001ffa       0x52 build/obj/app.o
+ .debug_macro   0x0000204c       0x88 build/obj/app.o
+ .debug_macro   0x000020d4       0x46 build/obj/app.o
+ .debug_macro   0x0000211a       0x46 build/obj/app.o
+ .debug_macro   0x00002160       0x16 build/obj/app.o
+ .debug_macro   0x00002176       0x3c build/obj/app.o
+ .debug_macro   0x000021b2      0x152 build/obj/app_structure.o
+ .debug_macro   0x00002304       0x45 build/obj/gpio.o
+ .debug_macro   0x00002349       0x7c build/obj/gpio.o
+ .debug_macro   0x000023c5       0x28 build/obj/gpio.o
+ .debug_macro   0x000023ed       0x61 build/obj/i2c.o
+ .debug_macro   0x0000244e       0x82 build/obj/i2c.o
+ .debug_macro   0x000024d0       0x82 build/obj/i2c.o
+ .debug_macro   0x00002552       0x33 build/obj/pwm.o
+ .debug_macro   0x00002585       0x4c build/obj/pwm.o
+ .debug_macro   0x000025d1       0x58 build/obj/systick.o
+ .debug_macro   0x00002629       0x3c build/obj/uart.o
+ .debug_macro   0x00002665       0x6a build/obj/uart.o
+ .debug_macro   0x000026cf       0x10 build/obj/uart.o
+ .debug_macro   0x000026df       0x4f build/obj/MPU.o
+ .debug_macro   0x0000272e       0x40 build/obj/MPU.o
+ .debug_macro   0x0000276e      0x151 build/obj/RGB_senser.o
+ .debug_macro   0x000028bf       0x3d build/obj/led.o
+ .debug_macro   0x000028fc      0x165 build/obj/motor.o
+ .debug_macro   0x00002a61       0x34 build/obj/ringbuff.o
+ .debug_macro   0x00002a95       0x47 build/obj/pid.o
+ .debug_macro   0x00002adc       0x46 build/obj/pid.o
+
+.debug_line     0x00000000     0x21a8
+ .debug_line    0x00000000      0x1dd build/obj/main.o
+ .debug_line    0x000001dd       0xc7 build/obj/startup_stm32f103c8.o
+ .debug_line    0x000002a4      0x2ec build/obj/app.o
+ .debug_line    0x00000590      0x613 build/obj/app_structure.o
+ .debug_line    0x00000ba3      0x148 build/obj/gpio.o
+ .debug_line    0x00000ceb      0x487 build/obj/i2c.o
+ .debug_line    0x00001172      0x11a build/obj/pwm.o
+ .debug_line    0x0000128c       0xf2 build/obj/systick.o
+ .debug_line    0x0000137e      0x1a2 build/obj/uart.o
+ .debug_line    0x00001520      0x1a3 build/obj/MPU.o
+ .debug_line    0x000016c3      0x419 build/obj/RGB_senser.o
+ .debug_line    0x00001adc       0xe3 build/obj/led.o
+ .debug_line    0x00001bbf      0x28b build/obj/motor.o
+ .debug_line    0x00001e4a      0x14b build/obj/ringbuff.o
+ .debug_line    0x00001f95      0x213 build/obj/pid.o
+
+.debug_str      0x00000000     0x8a70
+ .debug_str     0x00000000     0x8a70 build/obj/main.o
+                               0x699b (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/startup_stm32f103c8.o
+                               0x3f66 (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/app.o
+                               0x82a6 (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/app_structure.o
+                               0x7dee (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/gpio.o
+                               0x44f4 (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/i2c.o
+                               0x45fe (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/pwm.o
+                               0x411b (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/systick.o
+                               0x4024 (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/uart.o
+                               0x4243 (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/MPU.o
+                               0x451f (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/RGB_senser.o
+                               0x81a2 (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/led.o
+                               0x41ff (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/motor.o
+                               0x8050 (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/ringbuff.o
+                               0x3fba (size before relaxing)
+ .debug_str     0x00008a70        0x0 build/obj/pid.o
+                               0x415e (size before relaxing)
+
+.comment        0x00000000       0x45
+ .comment       0x00000000       0x45 build/obj/main.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/startup_stm32f103c8.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/app.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/app_structure.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/gpio.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/i2c.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/pwm.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/systick.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/uart.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/MPU.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/RGB_senser.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/led.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/motor.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/ringbuff.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/obj/pid.o
+                                 0x46 (size before relaxing)
+
+.ARM.attributes
+                0x00000000       0x2d
+ .ARM.attributes
+                0x00000000       0x2d build/obj/main.o
+ .ARM.attributes
+                0x0000002d       0x2d build/obj/startup_stm32f103c8.o
+ .ARM.attributes
+                0x0000005a       0x2d build/obj/app.o
+ .ARM.attributes
+                0x00000087       0x2d build/obj/app_structure.o
+ .ARM.attributes
+                0x000000b4       0x2d build/obj/gpio.o
+ .ARM.attributes
+                0x000000e1       0x2d build/obj/i2c.o
+ .ARM.attributes
+                0x0000010e       0x2d build/obj/pwm.o
+ .ARM.attributes
+                0x0000013b       0x2d build/obj/systick.o
+ .ARM.attributes
+                0x00000168       0x2d build/obj/uart.o
+ .ARM.attributes
+                0x00000195       0x2d build/obj/MPU.o
+ .ARM.attributes
+                0x000001c2       0x2d build/obj/RGB_senser.o
+ .ARM.attributes
+                0x000001ef       0x2d build/obj/led.o
+ .ARM.attributes
+                0x0000021c       0x2d build/obj/motor.o
+ .ARM.attributes
+                0x00000249       0x2d build/obj/ringbuff.o
+ .ARM.attributes
+                0x00000276       0x2d build/obj/pid.o
+ .ARM.attributes
+                0x000002a3       0x1d C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
+ .ARM.attributes
+                0x000002c0       0x1d C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x000002dd       0x1d C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x000002fa       0x1d C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+
+.debug_frame    0x00000000      0xcf8
+ .debug_frame   0x00000000       0x2c build/obj/main.o
+ .debug_frame   0x0000002c       0x48 build/obj/startup_stm32f103c8.o
+ .debug_frame   0x00000074       0x4c build/obj/app.o
+ .debug_frame   0x000000c0       0x58 build/obj/app_structure.o
+ .debug_frame   0x00000118       0x88 build/obj/gpio.o
+ .debug_frame   0x000001a0      0x208 build/obj/i2c.o
+ .debug_frame   0x000003a8       0x58 build/obj/pwm.o
+ .debug_frame   0x00000400       0x98 build/obj/systick.o
+ .debug_frame   0x00000498      0x124 build/obj/uart.o
+ .debug_frame   0x000005bc       0xbc build/obj/MPU.o
+ .debug_frame   0x00000678      0x168 build/obj/RGB_senser.o
+ .debug_frame   0x000007e0       0x8c build/obj/led.o
+ .debug_frame   0x0000086c      0x120 build/obj/motor.o
+ .debug_frame   0x0000098c       0xd8 build/obj/ringbuff.o
+ .debug_frame   0x00000a64      0x124 build/obj/pid.o
+ .debug_frame   0x00000b88       0x24 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
+ .debug_frame   0x00000bac       0x4c C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x00000bf8       0x38 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivsf3.o)
+ .debug_frame   0x00000c30       0xc8 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+
+.debug_line_str
+                0x00000000       0xca
+ .debug_line_str
+                0x00000000       0xca C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_mulsf3.o)
+ .debug_line_str
+                0x000000ca        0x0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+                                 0xca (size before relaxing)
+ .debug_line_str
+                0x000000ca        0x0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldivsf3.o)
+                                 0xca (size before relaxing)
+ .debug_line_str
+                0x000000ca        0x0 C:/toolchain/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+                                 0xca (size before relaxing)
